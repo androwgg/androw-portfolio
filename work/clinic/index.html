@@ -1,148 +1,409 @@
 <!doctype html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="utf-8">
+<meta charset="utf-8"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'none'; base-uri 'none'; form-action 'none'; object-src 'none'">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
 <title>عيادة نور للجلدية والتجميل</title>
+<meta name="description" content="عيادة جلدية وتجميل: كشف جلدية، بوتوكس، فيلر وفراكشنال ليزر. مواعيد العيادة وطريقة الحجز.">
+<meta name="theme-color" content="#0b5d6b">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%230b5d6b'/%3E%3Cpath d='M32 14v36M14 32h36' stroke='%23e3f2f1' stroke-width='9'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --deep:#16302d; --deep-2:#1f403c; --cream:#f6f1e7; --paper:#fbf9f4;
-  --gold:#c8a465; --gold-ink:#1b1608; --ink:#1d2624; --muted:#56635f; --line:#e4ddcf;
+  --white:#fbfdfd; --teal:#0b5d6b; --teal-d:#08434d; --mint:#e3f2f1; --mint-2:#cfe6e4;
+  --coral:#c24420; --coral-d:#a23517; --ink:#0d2a30; --muted:#4a646a; --line:#d3e3e3;
+  --e:cubic-bezier(.2,.7,.2,1); --r:10px; --r-s:8px; --rail:236px; --panel:344px;
 }
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:"IBM Plex Sans Arabic",system-ui,sans-serif;background:var(--paper);color:var(--ink);line-height:1.7;padding-bottom:76px}
-.wrap{max-width:760px;margin:0 auto;padding-left:20px;padding-right:20px}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{font-family:"IBM Plex Sans Arabic",system-ui,sans-serif;background:var(--white);color:var(--ink);line-height:1.75;font-size:16.5px;font-variant-numeric:tabular-nums;padding-bottom:72px}
 a{color:inherit}
-a:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
-.hero{background:var(--deep);color:var(--cream);position:relative;overflow:hidden}
-.hero::after{content:"";position:absolute;left:-70px;bottom:-110px;width:260px;height:260px;border:1px solid rgba(200,164,101,.35);border-radius:50%}
-.hero::before{content:"";position:absolute;left:-20px;bottom:-170px;width:260px;height:260px;border:1px solid rgba(200,164,101,.18);border-radius:50%}
-.hero .wrap{padding-top:44px;padding-bottom:40px;position:relative;z-index:1}
-.place{display:inline-flex;align-items:center;gap:8px;font-size:.9rem;color:var(--gold);font-weight:500}
-.place::before{content:"";width:22px;height:1px;background:var(--gold)}
-h1{font-size:2rem;line-height:1.3;font-weight:700;margin-top:14px}
-h1 small{display:block;font-size:1rem;font-weight:400;color:#cfd8d3;margin-top:10px;line-height:1.7}
-.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:26px}
-.btn{display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-weight:600;padding:12px 18px;border-radius:6px;border:1px solid transparent;font-size:1rem}
-.btn svg{width:18px;height:18px;flex:none}
-.btn.gold{background:var(--gold);color:var(--gold-ink)}
-.btn.line{border-color:rgba(246,241,231,.45);color:var(--cream)}
-.btn.dark{background:var(--deep);color:var(--cream)}
-.facts{background:var(--deep-2);color:var(--cream)}
-.facts ul{list-style:none;display:grid;grid-template-columns:1fr}
-.facts li{display:flex;align-items:center;gap:12px;padding:14px 0;border-top:1px solid rgba(246,241,231,.12);font-size:.95rem}
-.facts li:first-child{border-top:0}
-.facts svg{width:20px;height:20px;color:var(--gold);flex:none}
-.facts b{font-weight:600}
-section{padding:40px 0}
-section+section{border-top:1px solid var(--line)}
-.eyebrow{font-size:.8rem;font-weight:600;color:#8a6a2c}
-h2{font-size:1.45rem;line-height:1.35;margin:4px 0 18px}
-.hours{background:#fff;border:1px solid var(--line);border-radius:8px;overflow:hidden}
-.row{display:flex;justify-content:space-between;align-items:center;gap:14px;padding:15px 16px;border-top:1px solid var(--line)}
-.row:first-child{border-top:0}
-.row .t{font-weight:600;white-space:nowrap}
-.row.off .t{color:#9a3b2f}
-.row.today{background:#f3ecdc}
-.row.today .d::after{content:"النهارده";margin-right:8px;font-size:.72rem;font-weight:600;background:var(--deep);color:var(--cream);padding:2px 7px;border-radius:4px;vertical-align:2px}
-.steps{list-style:none;counter-reset:s;display:grid;gap:12px}
-.steps li{counter-increment:s;display:flex;gap:14px;background:#fff;border:1px solid var(--line);border-radius:8px;padding:16px}
-.steps li::before{content:counter(s);flex:none;width:30px;height:30px;border-radius:6px;background:var(--deep);color:var(--gold);font-weight:700;display:grid;place-items:center}
-.steps a{font-weight:600;color:var(--deep);direction:ltr;unicode-bidi:isolate}
-.services{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
-.services li{background:var(--deep);color:var(--cream);border-radius:8px;padding:22px 10px;text-align:center;font-weight:600;border-top:3px solid var(--gold)}
-.svc-note{margin-top:12px;color:var(--muted);font-size:.9rem}
-address{font-style:normal;font-size:1.05rem}
-.addr-card{background:#fff;border:1px solid var(--line);border-radius:8px;padding:18px}
-.addr-card .btn{margin-top:14px}
-footer{padding-top:24px;padding-bottom:30px;color:var(--muted);font-size:.85rem;border-top:1px solid var(--line)}
-.bar{position:fixed;left:0;right:0;bottom:0;background:rgba(22,48,45,.97);display:flex;gap:8px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));z-index:10}
-.bar a{flex:1;justify-content:center}
-@media (min-width:700px){.bar{display:none}body{padding-bottom:0}.facts ul{grid-template-columns:repeat(3,1fr);gap:18px}.facts li{border-top:0}}
+button,input,select{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--teal);outline-offset:2px}
+.skip{position:absolute;inset-inline-start:12px;top:-70px;background:var(--ink);color:#fff;padding:12px 16px;border-radius:var(--r-s);z-index:90}
+.skip:focus{top:10px}
+.ltr{direction:ltr;unicode-bidi:isolate}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+svg.i{width:20px;height:20px;flex:none}
+
+/* layout: rail | main (content + appointment column) */
+.app{display:block}
+.main{display:grid;grid-template-columns:minmax(0,1fr);grid-template-areas:"ov" "panel" "content"}
+.rail{position:sticky;top:-56px;z-index:50;background:var(--white);border-bottom:1px solid var(--line)}
+.ov{grid-area:ov}
+.panel{grid-area:panel}
+.content{grid-area:content;min-width:0}
+@media (min-width:700px) and (max-width:1079px){
+  .main{grid-template-columns:minmax(0,1fr) 330px;grid-template-areas:"ov panel" "content panel"}
+  .panel{position:sticky;top:60px;align-self:start;margin:20px}
+}
+@media (min-width:1080px){
+  .app{display:grid;grid-template-columns:var(--rail) minmax(0,1fr)}
+  .rail{top:0;height:100vh;align-self:start;border-bottom:0;border-inline-end:1px solid var(--line);display:flex;flex-direction:column;padding:22px 14px}
+  .main{grid-template-columns:minmax(0,1fr) var(--panel);grid-template-rows:auto 1fr;grid-template-areas:"ov panel" "content panel"}
+  .panel{position:sticky;top:0;align-self:start;height:100vh;overflow:auto;border-inline-start:1px solid var(--line);background:var(--mint);padding:22px 20px;scrollbar-width:thin}
+}
+
+/* rail */
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:700;line-height:1.3;min-height:56px;padding:0 16px}
+.brand svg{width:34px;height:34px;flex:none}
+.brand small{display:block;font-weight:500;font-size:.78rem;color:var(--muted)}
+.tabs{position:relative;display:flex;overflow-x:auto;scrollbar-width:none;padding:0 8px;gap:2px}
+.ind{position:absolute;left:0;bottom:0;width:100px;height:3px;background:var(--teal);transform-origin:0 50%;pointer-events:none}
+.tabs a{position:relative;z-index:1}
+.tabs::-webkit-scrollbar{display:none}
+.tabs a{flex:none;display:flex;align-items:center;gap:8px;min-height:48px;padding:0 14px;text-decoration:none;font-weight:600;font-size:.95rem;color:var(--muted);border-bottom:3px solid transparent}
+.tabs a svg{display:none}
+.tabs a[aria-current="true"]{color:var(--teal)}
+.tabs a:hover{color:var(--teal)}
+.today-card{display:none}
+@media (min-width:1080px){
+  .brand{padding:0 8px 18px;border-bottom:1px solid var(--line);margin-bottom:14px}
+  .tabs{flex-direction:column;overflow:visible;padding:0;gap:2px}
+  .tabs a{border-bottom:0;border-radius:var(--r-s);min-height:46px;padding:0 12px}
+  .tabs a svg{display:block;width:20px;height:20px;flex:none}
+  .ind{left:0;right:0;bottom:auto;top:0;width:auto;height:46px;background:var(--mint);border-radius:var(--r-s);z-index:0}
+  .tabs a[aria-current="true"]{color:var(--teal-d)}
+  .tabs a:hover{background:var(--mint)}
+  .today-card{display:block;margin-top:auto;border:1px solid var(--line);border-radius:var(--r);padding:14px;font-size:.92rem;line-height:1.6}
+  .today-card small{display:block;color:var(--muted);font-weight:500}
+  .today-card b{display:block;font-weight:700}
+}
+
+/* overview */
+.ov{padding:clamp(22px,4vw,40px) clamp(16px,3vw,36px) 8px}
+.crumb{display:flex;align-items:center;gap:8px;color:var(--muted);font-size:.88rem;font-weight:500}
+.crumb::before{content:"";width:22px;height:2px;background:var(--teal)}
+h1{font-size:clamp(1.8rem,1.2rem + 2.4vw,2.7rem);line-height:1.3;font-weight:700;margin-top:8px;color:var(--teal-d)}
+.sample{margin-top:10px;display:inline-block;font-size:.9rem;font-weight:700;color:var(--teal-d);background:var(--mint);border-radius:6px;padding:2px 10px}
+.ov .sub{margin-top:8px;max-width:56ch;color:var(--muted);font-size:1.05rem}
+.facts{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);margin-top:22px;border:1px solid var(--line);border-radius:var(--r);background:var(--mint);overflow:hidden}
+.facts li{display:flex;gap:12px;align-items:flex-start;padding:14px 16px;border-inline-start:1px solid var(--mint-2)}
+.facts li:first-child{border-inline-start:0}
+.facts svg{color:var(--teal);margin-top:3px}
+.facts small{display:block;color:var(--muted);font-size:.82rem;line-height:1.5;font-weight:500}
+.facts b{display:block;font-weight:600;line-height:1.5}
+@media (max-width:760px){.facts{grid-template-columns:1fr}.facts li{border-inline-start:0;border-top:1px solid var(--mint-2)}.facts li:first-child{border-top:0}}
+
+/* sections */
+.content section{padding:34px clamp(16px,3vw,36px);border-top:1px solid var(--line);margin-top:26px}
+.content section:first-child{margin-top:18px}
+.sec-h{display:flex;align-items:baseline;gap:12px;margin-bottom:14px}
+h2{font-size:1.4rem;line-height:1.4;font-weight:700}
+.note{margin-top:12px;color:var(--muted);font-size:.92rem}
+
+/* services: ruled list with durations */
+.svc{list-style:none;border-top:2px solid var(--teal)}
+.svc li{display:grid;grid-template-columns:1fr auto;gap:14px;align-items:center;padding:16px 0;border-bottom:1px solid var(--line)}
+.svc h3{font-size:1.08rem;font-weight:600;line-height:1.5}
+.svc p{color:var(--muted);font-size:.92rem;line-height:1.6}
+.dur{display:inline-flex;align-items:center;gap:6px;background:var(--mint);color:var(--teal-d);border-radius:6px;padding:4px 10px;font-weight:600;font-size:.9rem;white-space:nowrap}
+.dur svg{width:16px;height:16px}
+@media (max-width:560px){.svc li{grid-template-columns:1fr}.svc .dur{justify-self:start}}
+
+/* directory table */
+.tbl{width:100%;border-collapse:collapse;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;font-size:.97rem}
+.tbl caption{text-align:start;position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.tbl th{background:var(--mint);color:var(--teal-d);text-align:start;font-weight:700;padding:11px 14px;border-bottom:1px solid var(--mint-2);font-size:.9rem}
+.tbl td{padding:14px;border-bottom:1px solid var(--line);vertical-align:top;line-height:1.6}
+.tbl tr:last-child td{border-bottom:0}
+.tbl td:first-child{font-weight:700}
+@media (max-width:700px){
+  .tbl,.tbl tbody,.tbl tr,.tbl td{display:block}
+  .tbl thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+  .tbl tr{border-bottom:1px solid var(--line);padding:6px 0}
+  .tbl tr:last-child{border-bottom:0}
+  .tbl td{border:0;padding:5px 14px;display:grid;grid-template-columns:96px 1fr;gap:10px}
+  .tbl td::before{content:attr(data-l);color:var(--muted);font-weight:600;font-size:.85rem}
+}
+
+/* hours */
+.hours{width:100%;border-collapse:collapse;border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.hours caption{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.hours th,.hours td{padding:13px 16px;border-bottom:1px solid var(--line);text-align:start;font-weight:500}
+.hours th{font-weight:600;width:42%}
+.hours tr:last-child th,.hours tr:last-child td{border-bottom:0}
+.hours tr.off td{color:var(--muted)}
+.hours tr.today{background:var(--mint)}
+.hours tr.today th::after{content:"النهارده";margin-inline-start:10px;font-size:.8rem;font-weight:700;background:var(--teal);color:#fff;padding:2px 8px;border-radius:5px;vertical-align:2px}
+
+/* booking steps */
+.steps{list-style:none;counter-reset:s;display:grid;gap:10px}
+.steps li{counter-increment:s;display:flex;gap:14px;align-items:flex-start;border:1px solid var(--line);border-radius:var(--r);padding:14px 16px}
+.steps li::before{content:counter(s);flex:none;width:32px;height:32px;border-radius:var(--r-s);background:var(--teal);color:#fff;font-weight:700;display:grid;place-items:center;margin-top:1px}
+.steps a{font-weight:700;color:var(--teal-d);display:inline-flex;align-items:center;min-height:44px;padding-inline:4px}
+address{font-style:normal;border:1px solid var(--line);border-radius:var(--r);padding:16px;display:flex;gap:12px;align-items:flex-start}
+address svg{color:var(--teal);margin-top:4px}
+
+/* appointment panel */
+.panel h2{font-size:1.25rem}
+.p-card{background:var(--white);border:1px solid var(--mint-2);border-radius:var(--r);padding:16px}
+.p-card+.p-card{margin-top:14px}
+.p-card h3{font-size:.95rem;font-weight:700;margin-bottom:10px}
+.days{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;border:0}
+.days legend{padding:0;font-size:.95rem;font-weight:700;margin-bottom:8px}
+.day{position:relative}
+.day input{position:absolute;opacity:0;inset:0;width:100%;height:100%;margin:0;cursor:pointer}
+.day input:disabled{cursor:not-allowed}
+.day span{display:grid;place-items:center;min-height:46px;border:1px solid var(--line);border-radius:var(--r-s);background:var(--white);font-weight:600;font-size:.88rem;text-align:center;line-height:1.3;padding:2px 2px;transition:border-color .12s,background-color .12s}
+.day:hover input:not(:disabled)+span{border-color:var(--teal)}
+.day input:checked+span{background:var(--teal);border-color:var(--teal);color:#fff}
+.day input:disabled+span{background:#eef3f3;color:#4c6268;text-decoration:line-through}
+.day input:focus-visible+span{outline:3px solid var(--teal);outline-offset:2px}
+.ck{position:absolute;top:5px;inset-inline-end:5px;width:12px;height:12px;pointer-events:none;display:none;fill:none;stroke:#fff;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+.ck path{stroke-dasharray:16}
+.day input:checked~.ck{display:block}
+.p-card{transition:box-shadow .2s var(--e)}
+.p-card:focus-within{box-shadow:0 0 0 3px var(--mint-2)}
+.slot{margin-top:12px;padding:10px 12px;background:var(--mint);border-radius:var(--r-s);font-weight:600;line-height:1.6}
+.slot small{display:block;color:var(--muted);font-weight:500;font-size:.82rem}
+.sel{margin-top:14px;display:block}
+.sel span{display:block;font-weight:700;font-size:.95rem;margin-bottom:6px}
+.sel select{width:100%;min-height:46px;padding:6px 12px;border:1px solid var(--teal);border-radius:var(--r-s);background:var(--white)}
+.btn{display:flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:8px 18px;border-radius:var(--r-s);font-weight:700;text-decoration:none;border:2px solid transparent;cursor:pointer;line-height:1.3;transition:background-color .15s,color .15s,transform .15s var(--e)}
+.btn svg{width:20px;height:20px;flex:none}
+.btn-book{background:var(--coral);color:#fff;margin-top:14px;width:100%}
+.btn:hover{transform:translateY(-1px)}
+.btn:active{transform:translateY(1px)}
+.btn-book:hover{background:var(--coral-d)}
+.btn-wa{border-color:var(--teal);color:var(--teal-d);background:var(--white);margin-top:8px;width:100%}
+.btn-wa:hover{background:var(--teal);color:#fff}
+.p-note{margin-top:12px;font-size:.88rem;color:var(--muted);line-height:1.65}
+.p-hours{list-style:none;font-size:.92rem}
+.p-hours li{display:flex;justify-content:space-between;gap:10px;padding:5px 0;border-bottom:1px solid var(--line)}
+.p-hours li:last-child{border-bottom:0}
+
+footer{border-top:1px solid var(--line);padding:22px clamp(16px,3vw,36px);color:var(--muted);font-size:.88rem;grid-column:1/-1}
+footer a{display:inline-flex;align-items:center;min-height:44px;color:var(--teal-d);font-weight:600}
+
+/* phone quick bar */
+.bar{position:fixed;inset-inline:0;bottom:0;z-index:60;display:grid;grid-template-columns:1.3fr 1fr;gap:8px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:var(--white);border-top:1px solid var(--line)}
+.bar .btn{margin:0;width:auto}
+@media (min-width:700px){.bar{display:none}body{padding-bottom:0}}
+
+
+/* motion (default state = final state; only runs when motion is allowed) */
+@keyframes hin{from{opacity:0;transform:translateY(12px)}}
+@keyframes hinT{from{transform:translateY(12px)}}
+@keyframes hinO{from{opacity:0}}
+@keyframes rv{from{opacity:0;transform:translateY(8px)}}
+@keyframes draw{from{stroke-dashoffset:16}to{stroke-dashoffset:0}}
+@keyframes sw{from{opacity:0;transform:translateY(4px)}}
+@media (prefers-reduced-motion:no-preference){
+  .crumb{animation:hinO .45s var(--e) backwards}
+  .ov h1{animation:hinT .5s var(--e) .06s backwards}
+  .ov .sub{animation:hin .5s var(--e) .12s backwards}
+  .facts{animation:hin .5s var(--e) .2s backwards}
+  .panel .p-card{animation:hin .5s var(--e) .24s backwards}
+  .ind.ready{transition:transform .3s var(--e)}
+  .day input:checked~.ck path{animation:draw .3s var(--e) backwards}
+  .slot.swap{animation:sw .22s var(--e)}
+  .js [data-rv]:not(.seen){opacity:0}
+  [data-rv].seen{animation:rv .45s var(--e) backwards;animation-delay:calc(var(--i,0)*50ms)}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
 </style>
+<script>try{document.documentElement.className+=' js'}catch(e){}</script>
 </head>
 <body>
-<header class="hero">
-  <div class="wrap">
-    <span class="place">جلدية وتجميل</span>
-    <h1>عيادة نور للجلدية والتجميل
-      <small>الكشف بأسبقية الحضور، ومتاح عدد محدود من الحجوزات بالتليفون.</small>
-    </h1>
-    <div class="actions">
-      <a class="btn gold" href="tel:+201000000000"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2"/></svg>احجز بالتليفون</a>
-      <a class="btn line" href="https://wa.me/201000000000"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12a9 9 0 0 1-13.4 7.9L3 21l1.2-4.4A9 9 0 1 1 21 12z"/></svg>راسلنا واتساب</a>
-    </div>
-  </div>
-</header>
+<a class="skip" href="#ov">تخطي إلى المحتوى</a>
 
-<div class="facts">
-  <div class="wrap">
-    <ul>
-      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>شغالين كل الأيام <b>ما عدا الجمعة</b></span></li>
-      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg><span>العنوان يظهر هنا (نموذج)</span></li>
-      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2"/></svg><span>الحجز: <b dir="ltr">01000000000</b></span></li>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2"/></symbol>
+  <symbol id="i-wa" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M21 12a9 9 0 0 1-13.4 7.9L3 21l1.2-4.4A9 9 0 1 1 21 12z"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></g></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></g></symbol>
+  <symbol id="i-grid" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="7" height="7" rx="1.5"/><rect x="13" y="4" width="7" height="7" rx="1.5"/><rect x="4" y="13" width="7" height="7" rx="1.5"/><rect x="13" y="13" width="7" height="7" rx="1.5"/></g></symbol>
+  <symbol id="i-list" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M8 6h12M8 12h12M8 18h12M4 6h.01M4 12h.01M4 18h.01"/></symbol>
+  <symbol id="i-users" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0M16 4.6a3.5 3.5 0 0 1 0 6.8M18 14.2A6.5 6.5 0 0 1 21.5 20"/></g></symbol>
+  <symbol id="i-cal" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/></g></symbol>
+</svg>
+
+<div class="app">
+  <header class="rail">
+    <a class="brand" href="#ov">
+      <svg viewBox="0 0 34 34" aria-hidden="true"><rect width="34" height="34" rx="8" fill="#0b5d6b"/><path d="M17 8v18M8 17h18" stroke="#e3f2f1" stroke-width="5"/></svg>
+      <span>عيادة نور<small>جلدية وتجميل</small></span>
+    </a>
+    <nav class="tabs" id="tabs" aria-label="أقسام الصفحة">
+      <span class="ind" id="ind" aria-hidden="true"></span>
+      <a href="#ov"><svg class="i" aria-hidden="true"><use href="#i-grid"/></svg>نظرة عامة</a>
+      <a href="#services"><svg class="i" aria-hidden="true"><use href="#i-list"/></svg>الخدمات</a>
+      <a href="#departments"><svg class="i" aria-hidden="true"><use href="#i-users"/></svg>الأقسام</a>
+      <a href="#hours"><svg class="i" aria-hidden="true"><use href="#i-clock"/></svg>المواعيد</a>
+      <a href="#booking"><svg class="i" aria-hidden="true"><use href="#i-cal"/></svg>طريقة الحجز</a>
+      <a href="#place"><svg class="i" aria-hidden="true"><use href="#i-pin"/></svg>العنوان</a>
+    </nav>
+    <div class="today-card" id="todayCard"><small>مواعيد النهارده</small><b id="todayText">شوف جدول المواعيد</b></div>
+  </header>
+
+  <main class="main" id="main">
+  <div class="ov" id="ov" tabindex="-1">
+    <span class="crumb">جلدية وتجميل</span>
+    <h1>عيادة نور للجلدية والتجميل</h1>
+    <p class="sample">نموذج تجريبي، البيانات للتوضيح فقط.</p>
+    <p class="sub">كشف جلدية، بوتوكس، فيلر وفراكشنال ليزر. الكشف بأسبقية الحضور، ومتاح عدد محدود من الحجوزات بالتليفون.</p>
+    <ul class="facts">
+      <li><svg class="i" aria-hidden="true"><use href="#i-clock"/></svg><div><small>أيام العمل</small><b>كل الأيام ما عدا الجمعة</b></div></li>
+      <li><svg class="i" aria-hidden="true"><use href="#i-pin"/></svg><div><small>العنوان</small><b>الشارع الرئيسي، الحي</b></div></li>
+      <li><svg class="i" aria-hidden="true"><use href="#i-phone"/></svg><div><small>الحجز بالتليفون</small><b class="ltr">01000000000</b></div></li>
     </ul>
   </div>
+
+  <section class="panel" id="panel" aria-labelledby="h-panel">
+    <h2 id="h-panel" style="margin-bottom:12px">احجز كشف</h2>
+    <div class="p-card">
+      <fieldset class="days" id="days" style="border:0;min-width:0">
+        <legend>اختار اليوم</legend>
+        <label class="day"><input type="radio" name="day" value="6" data-n="السبت" data-t="من 6:30 لـ 10 مساءً"><span>السبت</span><svg class="ck" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3.2 3.2L13 5"/></svg></label>
+        <label class="day"><input type="radio" name="day" value="0" data-n="الأحد" data-t="من 1 الظهر لـ 4 العصر"><span>الأحد</span><svg class="ck" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3.2 3.2L13 5"/></svg></label>
+        <label class="day"><input type="radio" name="day" value="1" data-n="الاثنين" data-t="من 6:30 لـ 10 مساءً"><span>الاثنين</span><svg class="ck" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3.2 3.2L13 5"/></svg></label>
+        <label class="day"><input type="radio" name="day" value="2" data-n="الثلاثاء" data-t="من 6:30 لـ 10 مساءً"><span>الثلاثاء</span><svg class="ck" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3.2 3.2L13 5"/></svg></label>
+        <label class="day"><input type="radio" name="day" value="3" data-n="الأربعاء" data-t="من 1 الظهر لـ 4 العصر"><span>الأربعاء</span><svg class="ck" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3.2 3.2L13 5"/></svg></label>
+        <label class="day"><input type="radio" name="day" value="4" data-n="الخميس" data-t="من 6:30 لـ 10 مساءً"><span>الخميس</span><svg class="ck" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3.2 3.2L13 5"/></svg></label>
+        <label class="day"><input type="radio" name="day" value="5" data-n="الجمعة" data-t="" disabled><span>الجمعة</span></label>
+      </fieldset>
+      <div class="slot" id="slot" aria-live="polite">اختار يوم تشوف ميعاده.</div>
+      <noscript><p class="p-note">اختيار اليوم ورسالة واتساب بيحتاجوا جافاسكربت. الاتصال بالتليفون شغال.</p></noscript>
+      <label class="sel"><span>نوع الزيارة</span>
+        <select id="visit">
+          <option>كشف جلدية</option>
+          <option>بوتوكس</option>
+          <option>فيلر</option>
+          <option>فراكشنال ليزر</option>
+        </select>
+      </label>
+      <a class="btn btn-book" href="tel:+201000000000"><svg aria-hidden="true"><use href="#i-phone"/></svg>احجز بالتليفون</a>
+      <a class="btn btn-wa" id="wa" href="https://wa.me/201000000000" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>ابعت الطلب على واتساب</a>
+      <p class="p-note">الحجز بالتليفون لعدد محدود. لو العدد اكتمل، الحجز بيتحول لليوم اللي بعده. رسالة واتساب طلب مش تأكيد، والعيادة بترد عليك بالميعاد.</p>
+    </div>
+    <div class="p-card">
+      <h3>أيام الاستقبال</h3>
+      <ul class="p-hours">
+        <li><span>السبت والاثنين والثلاثاء والخميس</span><b>6:30 لـ 10 م</b></li>
+        <li><span>الأحد والأربعاء</span><b>1 لـ 4 ع</b></li>
+        <li><span>الجمعة</span><b>إجازة</b></li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="content">
+    <section id="services" aria-labelledby="h-svc">
+      <div class="sec-h"><h2 id="h-svc">الخدمات</h2></div>
+      <ul class="svc">
+        <li><div><h3>كشف جلدية</h3><p>تشخيص ومتابعة، وبعده الدكتورة بتحدد الخطة.</p></div><span class="dur"><svg aria-hidden="true"><use href="#i-clock"/></svg>حوالي 15 إلى 20 دقيقة</span></li>
+        <li><div><h3>بوتوكس</h3><p>بعد الكشف والاتفاق على المناطق المناسبة.</p></div><span class="dur"><svg aria-hidden="true"><use href="#i-clock"/></svg>حوالي 20 إلى 30 دقيقة</span></li>
+        <li><div><h3>فيلر</h3><p>حسب المنطقة والكمية اللي بتتحدد في الكشف.</p></div><span class="dur"><svg aria-hidden="true"><use href="#i-clock"/></svg>حوالي 30 إلى 45 دقيقة</span></li>
+        <li><div><h3>فراكشنال ليزر</h3><p>جلسة بتحددها الدكتورة حسب حالة الجلد.</p></div><span class="dur"><svg aria-hidden="true"><use href="#i-clock"/></svg>حوالي 30 إلى 60 دقيقة</span></li>
+      </ul>
+      <p class="note">المدد تقريبية وللتوضيح فقط، والدكتورة بتحدد المناسب ليك بعد الكشف.</p>
+    </section>
+
+    <section id="departments" aria-labelledby="h-dep">
+      <div class="sec-h"><h2 id="h-dep">الأقسام والأطباء</h2></div>
+      <table class="tbl">
+        <caption>أقسام العيادة</caption>
+        <thead><tr><th scope="col">القسم</th><th scope="col">بيغطي إيه</th><th scope="col">الطبيب</th><th scope="col">الحجز</th></tr></thead>
+        <tbody>
+          <tr><td data-l="القسم">الجلدية</td><td data-l="بيغطي إيه">الكشف والمتابعة</td><td data-l="الطبيب">اسم الطبيبة: نموذج تجريبي</td><td data-l="الحجز">أسبقية حضور أو تليفون</td></tr>
+          <tr><td data-l="القسم">الحقن التجميلي</td><td data-l="بيغطي إيه">بوتوكس وفيلر</td><td data-l="الطبيب">اسم الطبيبة: نموذج تجريبي</td><td data-l="الحجز">بعد الكشف</td></tr>
+          <tr><td data-l="القسم">الليزر</td><td data-l="بيغطي إيه">فراكشنال ليزر</td><td data-l="الطبيب">اسم الطبيبة: نموذج تجريبي</td><td data-l="الحجز">بعد الكشف</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="hours" aria-labelledby="h-hours">
+      <div class="sec-h"><h2 id="h-hours">مواعيد العيادة</h2></div>
+      <table class="hours" id="hoursTbl">
+        <caption>مواعيد العيادة الأسبوعية</caption>
+        <tbody>
+          <tr data-day="6"><th scope="row">السبت</th><td>من 6:30 لـ 10 مساءً</td></tr>
+          <tr data-day="0"><th scope="row">الأحد</th><td>من 1 الظهر لـ 4 العصر</td></tr>
+          <tr data-day="1"><th scope="row">الاثنين</th><td>من 6:30 لـ 10 مساءً</td></tr>
+          <tr data-day="2"><th scope="row">الثلاثاء</th><td>من 6:30 لـ 10 مساءً</td></tr>
+          <tr data-day="3"><th scope="row">الأربعاء</th><td>من 1 الظهر لـ 4 العصر</td></tr>
+          <tr data-day="4"><th scope="row">الخميس</th><td>من 6:30 لـ 10 مساءً</td></tr>
+          <tr class="off" data-day="5"><th scope="row">الجمعة</th><td>إجازة</td></tr>
+        </tbody>
+      </table>
+      <p class="note">المواعيد وسياسة الحجز في الصفحة دي تجريبية للتوضيح فقط.</p>
+    </section>
+
+    <section id="booking" aria-labelledby="h-book">
+      <div class="sec-h"><h2 id="h-book">إزاي تحجز</h2></div>
+      <ol class="steps">
+        <li><div>تعالى العيادة في الميعاد والكشف بأسبقية الحضور، أو احجز بالتليفون على <a class="ltr" href="tel:+201000000000">01000000000</a> (لعدد محدود).</div></li>
+        <li><div>لو العدد اكتمل، الحجز بيتحول لليوم اللي بعده.</div></li>
+        <li><div>لو مش هتقدر تيجي، اعتذر قبل الميعاد بوقت كافي، عشان الفرصة تتاح لمريض تاني.</div></li>
+      </ol>
+    </section>
+
+    <section id="place" aria-labelledby="h-addr">
+      <div class="sec-h"><h2 id="h-addr">مكان العيادة</h2></div>
+      <address><svg class="i" aria-hidden="true"><use href="#i-pin"/></svg><span>الشارع الرئيسي، الحي. عنوان تجريبي للتوضيح.</span></address>
+    </section>
+  </div>
+  </main>
+
+  <footer>نموذج تجريبي، الاسم والبيانات للعرض فقط. مفيش بيانات حقيقية أو أطباء حقيقيين في الصفحة دي.</footer>
 </div>
 
-<main class="wrap">
-  <section id="hours" aria-labelledby="h-hours">
-    <span class="eyebrow">المواعيد</span>
-    <h2 id="h-hours">مواعيد العيادة</h2>
-    <div class="hours">
-      <div class="row" data-day="6"><span class="d">السبت</span><span class="t">من 6:30 لـ 10 مساءً</span></div>
-      <div class="row" data-day="0"><span class="d">الأحد</span><span class="t">من 1 الظهر لـ 4 العصر</span></div>
-      <div class="row" data-day="1"><span class="d">الاثنين</span><span class="t">من 6:30 لـ 10 مساءً</span></div>
-      <div class="row" data-day="2"><span class="d">الثلاثاء</span><span class="t">من 6:30 لـ 10 مساءً</span></div>
-      <div class="row" data-day="3"><span class="d">الأربعاء</span><span class="t">من 1 الظهر لـ 4 العصر</span></div>
-      <div class="row" data-day="4"><span class="d">الخميس</span><span class="t">من 6:30 لـ 10 مساءً</span></div>
-      <div class="row off" data-day="5"><span class="d">الجمعة</span><span class="t">إجازة</span></div>
-    </div>
-  </section>
-
-  <section id="booking" aria-labelledby="h-book">
-    <span class="eyebrow">الحجز</span>
-    <h2 id="h-book">إزاي تحجز</h2>
-    <ol class="steps">
-      <li><div>تعالى العيادة في الميعاد والكشف بأسبقية الحضور، أو احجز بالتليفون على <a href="tel:+201000000000">01000000000</a> (لعدد محدود).</div></li>
-      <li><div>لو العدد اكتمل، الحجز بيتحول لليوم اللي بعده.</div></li>
-      <li><div>لو مش هتقدر تيجي، اعتذر قبل الميعاد بوقت كافي، عشان الفرصة تتاح لمريض تاني.</div></li>
-    </ol>
-  </section>
-
-  <section id="services" aria-labelledby="h-svc">
-    <span class="eyebrow">الخدمات</span>
-    <h2 id="h-svc">من خدمات العيادة</h2>
-    <ul class="services">
-      <li>بوتوكس</li>
-      <li>فيلر</li>
-      <li>فراكشنال ليزر</li>
-    </ul>
-    <p class="svc-note">الدكتورة بتحدد المناسب ليك بعد الكشف.</p>
-  </section>
-
-  <section id="place" aria-labelledby="h-addr">
-    <span class="eyebrow">العنوان</span>
-    <h2 id="h-addr">مكان العيادة</h2>
-    <div class="addr-card">
-      <address>العنوان بالتفصيل يظهر هنا (نموذج).</address>
-    </div>
-  </section>
-</main>
-
-<footer class="wrap">نموذج تصميم (Concept)، الاسم والبيانات للعرض فقط.</footer>
-
 <nav class="bar" aria-label="تواصل سريع">
-  <a class="btn gold" href="tel:+201000000000"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2"/></svg>اتصال</a>
-  <a class="btn line" href="https://wa.me/201000000000"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12a9 9 0 0 1-13.4 7.9L3 21l1.2-4.4A9 9 0 1 1 21 12z"/></svg>واتساب</a>
+  <a class="btn btn-book" href="tel:+201000000000"><svg aria-hidden="true"><use href="#i-phone"/></svg>احجز بالتليفون</a>
+  <a class="btn btn-wa" href="https://wa.me/201000000000" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>واتساب</a>
 </nav>
+
 <script>
-try{var r=document.querySelector('.row[data-day="'+new Date().getDay()+'"]');if(r)r.classList.add('today');}catch(e){}
+(function(){
+  var $=function(s,c){return (c||document).querySelector(s)},$$=function(s,c){return [].slice.call((c||document).querySelectorAll(s))};
+  var today=new Date().getDay();
+  /* highlight today in the hours table */
+  try{var r=$('#hoursTbl tr[data-day="'+today+'"]');if(r){r.classList.add('today');var t=r.querySelector('td').textContent;var tt=$('#todayText');if(tt)tt.textContent=r.classList.contains('off')?'إجازة النهارده':t;}}catch(e){}
+
+  /* reveal once on enter (class only, never re-hidden) */
+  (function(){
+    [].slice.call(document.querySelectorAll('.svc li,.steps li,.tbl tbody tr,.hours tr,.p-hours li')).forEach(function(e){e.setAttribute('data-rv','')});
+    var els=[].slice.call(document.querySelectorAll('[data-rv]'));
+    if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('seen')});return}
+    var io=new IntersectionObserver(function(es){var n=0;es.forEach(function(x){if(!x.isIntersecting)return;x.target.style.setProperty('--i',Math.min(n++,6));x.target.classList.add('seen');io.unobserve(x.target)})},{threshold:.12});
+    els.forEach(function(e){io.observe(e)});
+  })();
+
+  /* appointment panel: day, visit type, whatsapp request */
+  var radios=$$('input[name="day"]'),slot=$('#slot'),visit=$('#visit'),wa=$('#wa'),ready=false;
+  function cur(){var c=radios.filter(function(x){return x.checked})[0];return c||null}
+  function upd(){
+    var c=cur(),v=visit.value,t='أهلاً، عايز أحجز '+v+(c?' يوم '+c.getAttribute('data-n'):'')+'.';
+    slot.innerHTML='';
+    if(c){var b=document.createElement('span');b.textContent='يوم '+c.getAttribute('data-n')+': '+c.getAttribute('data-t');slot.appendChild(b);var s=document.createElement('small');s.textContent=(c.value==String(today)?'النهارده. ':'')+'الكشف بأسبقية الحضور.';slot.appendChild(s);}
+    else slot.textContent='اختار يوم تشوف ميعاده.';
+    wa.href='https://wa.me/201000000000?text='+encodeURIComponent(t);
+    if(ready){slot.classList.remove('swap');void slot.offsetWidth;slot.classList.add('swap');}
+  }
+  radios.forEach(function(x){x.addEventListener('change',upd)});visit.addEventListener('change',upd);
+  (function(){var d=today,n=0,pick=null;while(n<7){var el=radios.filter(function(x){return x.value==String(d)&&!x.disabled})[0];if(el){pick=el;break}d=(d+1)%7;n++}if(pick)pick.checked=true;upd();ready=true;})();
+
+  /* scroll spy for the nav rail / tabs */
+  var links=$$('#tabs a'),ids=links.map(function(a){return a.getAttribute('href').slice(1)});
+  function mark(id){links.forEach(function(a){if(a.getAttribute('href')==='#'+id)a.setAttribute('aria-current','true');else a.removeAttribute('aria-current')});
+    var act=$('#tabs a[aria-current]');if(act){var tb=$('#tabs');if(tb.scrollWidth>tb.clientWidth+2&&!desk.matches){var ar0=act.getBoundingClientRect(),tr0=tb.getBoundingClientRect();tb.scrollLeft+=(ar0.left+ar0.width/2)-(tr0.left+tr0.width/2);}place(act);}}
+  var desk=window.matchMedia('(min-width:1080px)'),ind=$('#ind');
+  function place(a){var tb=$('#tabs'),ar=a.getBoundingClientRect(),tr=tb.getBoundingClientRect();
+    if(desk.matches)ind.style.transform='translateY('+(ar.top-tr.top+tb.scrollTop)+'px)';
+    else ind.style.transform='translateX('+(ar.left-tr.left+tb.scrollLeft)+'px) scaleX('+(ar.width/100)+')';}
+  mark('ov');
+  setTimeout(function(){ind.classList.add('ready')},60);
+  window.addEventListener('resize',function(){var a=$('#tabs a[aria-current]');if(a)place(a)});
+  if('IntersectionObserver' in window){
+    var vis={};
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){vis[e.target.id]=e.isIntersecting});var f=ids.filter(function(i){return vis[i]})[0];if(f)mark(f);},{rootMargin:'-20% 0px -60% 0px'});
+    ids.forEach(function(i){var el=document.getElementById(i);if(el)io.observe(el)});
+  }
+  links.forEach(function(a){a.addEventListener('click',function(){mark(a.getAttribute('href').slice(1))})});
+})();
 </script>
 </body>
 </html>
-

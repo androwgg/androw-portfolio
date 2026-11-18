@@ -1,157 +1,208 @@
 <!doctype html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="utf-8">
+<meta charset="utf-8"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'none'; base-uri 'none'; form-action 'none'; object-src 'none'">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
 <title>Ward Spa | سبا ورد للسيدات</title>
+<meta name="description" content="نموذج تجريبي لصفحة سبا للسيدات: جلسات للجسم والبشرة والشعر والأظافر.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%231f2d26'/%3E%3Cpath d='M14 50C14 28 28 14 50 14 50 36 36 50 14 50zM14 50L34 30' stroke='%23b98b6b' stroke-width='2.5' fill='none'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Noto+Naskh+Arabic:wght@600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Noto+Naskh+Arabic:wght@400;500;600&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add("js")</script>
 <style>
 :root{
-  --green:#123d30; --green-2:#1b4d3e; --cream:#f7f1e6; --paper:#fcfaf5;
-  --gold:#c9a45c; --gold-ink:#1d1606; --ink:#1e2622; --muted:#56625c; --line:#e6ddcc; --rose:#efe2d6;
+  --moss:#1f2d26; --moss-2:#283a31; --sand:#e8dccb; --clay:#b98b6b; --clay-ink:#6f452a; --white:#faf6f0;
+  --muted:#cdc3b2; --hair:rgba(232,220,203,.28); --hair-ink:rgba(31,45,38,.3);
+  --serif:"Cormorant Garamond","Noto Naskh Arabic","Amiri",Georgia,serif;
+  --arabic:"Noto Naskh Arabic","Amiri","Cormorant Garamond",serif;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{font-family:"IBM Plex Sans Arabic",system-ui,sans-serif;background:var(--paper);color:var(--ink);line-height:1.75;padding-bottom:76px}
-.wrap{max-width:760px;margin:0 auto;padding-left:20px;padding-right:20px}
+body{font-family:var(--arabic);background:var(--moss);color:var(--white);line-height:2;font-size:18px;-webkit-font-smoothing:antialiased}
 a{color:inherit}
-a:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
-.serif{font-family:"Noto Naskh Arabic",serif}
+:focus-visible{outline:2px solid var(--clay);outline-offset:4px}
+.panel :focus-visible{outline-color:var(--clay-ink)}
+.col{max-width:620px;margin:0 auto;padding-inline:24px}
+.lat{font-family:var(--serif);font-weight:400;letter-spacing:.14em;text-transform:uppercase;direction:ltr;unicode-bidi:isolate}
+.skip{position:absolute;inset-inline-start:-9999px;top:0;background:var(--sand);color:var(--moss);padding:12px 18px}
+.skip:focus{inset-inline-start:12px;top:12px;z-index:30}
 
-.hero{background:var(--green);color:var(--cream);position:relative;overflow:hidden}
-.hero .leaf{position:absolute;left:-40px;top:30px;width:200px;height:200px;opacity:.16;color:var(--gold)}
-.hero .wrap{padding-top:46px;padding-bottom:42px;position:relative;z-index:1}
-.chip{display:inline-block;font-size:.85rem;font-weight:600;color:var(--green);background:var(--gold);padding:3px 10px;border-radius:4px}
-.brand{font-size:.95rem;color:var(--gold);margin-top:18px;letter-spacing:.5px;direction:ltr;text-align:right}
-h1{font-family:"Noto Naskh Arabic",serif;font-size:2.15rem;line-height:1.45;font-weight:700;margin-top:6px}
-.lead{color:#d6dfd9;margin-top:10px;font-size:1.02rem}
-.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:26px}
-.btn{display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-weight:600;padding:12px 18px;border-radius:6px;border:1px solid transparent;font-size:1rem}
-.btn svg{width:18px;height:18px;flex:none}
-.btn.gold{background:var(--gold);color:var(--gold-ink)}
-.btn.line{border-color:rgba(247,241,230,.45);color:var(--cream)}
-.btn.dark{background:var(--green);color:var(--cream)}
+/* hero */
+.hero{text-align:center;padding-block:20px 96px}
+.demo{font-size:.9rem;color:var(--muted);margin:0 0 48px;border-bottom:1px solid var(--hair);padding-bottom:10px}
+.hero .tag{display:inline-block;color:var(--clay);font-size:.95rem;border-block:1px solid var(--hair);padding:2px 18px}
+.hero .name{font-family:var(--serif);font-weight:300;font-size:clamp(3.2rem,12vw,5.2rem);line-height:1.05;letter-spacing:.08em;margin:34px 0 4px;direction:ltr}
+h1{font-family:var(--arabic);font-weight:500;font-size:clamp(1.5rem,5.4vw,2.1rem);line-height:1.7;margin-top:14px}
+.lead{color:var(--muted);margin:10px auto 0;max-width:30em}
+.actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:34px}
+.btn{transform:translateY(0);display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:8px 26px;text-decoration:none;font-family:var(--arabic);font-weight:600;font-size:1rem;border:1px solid var(--clay);border-radius:2px;transition:background .2s,color .2s,transform .2s cubic-bezier(.2,.7,.2,1)}
+.btn:hover{transform:translateY(-2px)}
+.btn:active{transform:translateY(0)}
+.menu li{transition:transform .2s cubic-bezier(.2,.7,.2,1)}
+.menu li:hover{transform:translateX(-4px)}
+.btn.fill{background:var(--clay);color:var(--moss)}
+.btn.fill:hover{background:var(--sand)}
+.btn.out{color:var(--white)}
+.btn.out:hover{background:var(--hair)}
+.panel .btn.fill{background:var(--moss);color:var(--white);border-color:var(--moss)}
+.panel .btn.fill:hover{background:var(--moss-2)}
 
-section{padding:42px 0}
-section+section{border-top:1px solid var(--line)}
-.eyebrow{font-size:.8rem;font-weight:600;color:#86672a}
-h2{font-family:"Noto Naskh Arabic",serif;font-size:1.55rem;line-height:1.45;margin:2px 0 10px}
-.intro{color:var(--muted);margin-bottom:18px}
+/* timeline */
+.line{position:relative}
+.stage .mark::before{content:"";position:absolute;bottom:100%;inset-inline-start:50%;height:88px;width:1px;background:var(--hair)}
+.stage:first-child .mark::before{display:none}
+.stage{position:relative;text-align:center;padding:0 0 88px}
+.stage:last-child{padding-bottom:40px}
+.mark{position:relative;z-index:1;display:block;width:max-content;margin:0 auto;background:var(--moss);padding:10px 0 14px}
+.num{display:block;width:14px;height:14px;margin:6px auto;border:1px solid var(--clay);background:var(--moss);transform:rotate(45deg)}
+.stage h2{font-family:var(--arabic);font-weight:500;font-size:1.7rem;line-height:1.6;margin-top:6px}
+.stage .lat{display:block;font-size:.8rem;color:var(--clay);margin-top:-2px}
+.stage .intro{color:var(--muted);max-width:28em;margin:12px auto 0}
 
-.care{display:grid;gap:12px}
-.care article{background:#fff;border:1px solid var(--line);border-radius:8px;padding:18px 18px 16px;border-right:4px solid var(--gold)}
-.care h3{font-size:1.08rem}
-.care p{color:var(--muted);font-size:.95rem;margin-top:2px}
-.natural{display:flex;gap:12px;align-items:center;background:var(--rose);border-radius:8px;padding:14px 16px;margin-top:16px;font-size:.95rem}
-.natural svg{width:26px;height:26px;color:var(--green-2);flex:none}
+.pts{list-style:none;margin:26px auto 0;max-width:30em;text-align:center}
+.pts li{padding:10px 0;border-top:1px solid var(--hair)}
+.pts li:first-child{border-top:0}
+.stage .actions{margin-top:26px}
 
-.svc{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.svc li{background:var(--green);color:var(--cream);border-radius:8px;padding:18px 14px;border-top:3px solid var(--gold)}
-.svc li b{display:block;font-size:1.02rem}
-.svc li span{display:block;color:#c9d4ce;font-size:.85rem;margin-top:2px}
+/* menu */
+.panel{background:var(--sand);color:var(--moss);padding:38px 28px 34px;margin:34px auto 0;text-align:start;position:relative;z-index:1;outline:1px solid var(--sand);outline-offset:6px}
+.panel h3{font-weight:600;font-size:1.15rem;text-align:center;color:var(--clay-ink);border-bottom:1px solid var(--hair-ink);padding-bottom:6px;margin-bottom:6px}
+.panel h3 + .sub{text-align:center;font-size:.92rem;margin-bottom:8px}
+.menu{list-style:none}
+.menu li{padding:12px 0 10px}
+.menu .row{display:flex;align-items:baseline;gap:10px}
+.menu .nm{font-weight:600;font-size:1.08rem}
+.menu .dot{flex:1;min-width:16px;border-bottom:2px dotted rgba(31,45,38,.55);transform:translateY(-5px)}
+.menu .du{font-family:var(--serif);font-size:1.15rem;font-weight:500;white-space:nowrap}
+.menu .ds{font-size:.92rem;margin-top:0;color:#3a4a41}
+.panel + .panel{margin-top:44px}
+.fine{font-size:.9rem;color:var(--muted);margin:30px auto 0;max-width:30em}
+.note{margin:26px auto 0;max-width:30em;border-block:1px solid var(--hair);padding:12px 0;font-size:.98rem}
 
-.private{background:var(--green-2);color:var(--cream);border-radius:10px;padding:24px 20px}
-.private h2{color:var(--cream)}
-.private ul{list-style:none;display:grid;gap:10px;margin-top:6px}
-.private li{display:flex;gap:10px;align-items:flex-start}
-.private li svg{width:20px;height:20px;color:var(--gold);flex:none;margin-top:4px}
-.private .btn{margin-top:18px}
+/* contact */
+.info{list-style:none;margin:26px auto 0;max-width:26em}
+.info li{padding:12px 0;border-top:1px solid var(--hair)}
+.info li:first-child{border-top:0}
+.info .k{display:block;color:var(--clay);font-size:.9rem}
+.info a{text-decoration:none;border-bottom:1px solid var(--hair)}
+.ph{display:inline-flex;align-items:center;min-height:44px;direction:ltr;unicode-bidi:isolate;font-family:var(--serif);font-size:1.4rem;letter-spacing:.08em}
 
-.info{background:#fff;border:1px solid var(--line);border-radius:8px}
-.info div{display:flex;gap:12px;padding:15px 16px;border-top:1px solid var(--line)}
-.info div:first-child{border-top:0}
-.info svg{width:20px;height:20px;color:#86672a;flex:none;margin-top:4px}
-.info .k{font-weight:600;display:block}
-.info .v{color:var(--muted)}
-.info + .btn{margin-top:14px}
+footer{border-top:1px solid var(--hair);margin-top:30px;padding-block:30px 20px;text-align:center;color:var(--muted);font-size:.9rem}
+footer p+p{margin-top:2px}
 
-footer{padding-top:24px;padding-bottom:30px;color:var(--muted);font-size:.85rem;border-top:1px solid var(--line)}
-.bar{position:fixed;left:0;right:0;bottom:0;background:rgba(18,61,48,.97);display:flex;gap:8px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));z-index:10}
-.bar a{flex:1;justify-content:center}
-@media (min-width:700px){.bar{display:none}body{padding-bottom:0}.care{grid-template-columns:1fr 1fr}.svc{grid-template-columns:repeat(4,1fr)}}
+@media (min-width:760px){.col{padding-inline:32px}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+@media (prefers-reduced-motion:no-preference){
+  @keyframes rise{from{opacity:0;transform:translateY(12px)}}
+  @keyframes drawY{from{transform:scaleY(0)}}
+  @keyframes drawX{from{transform:translateY(-5px) scaleX(0)}}
+  .hero>*{animation:rise .6s cubic-bezier(.2,.7,.2,1) backwards}
+  .hero .tag{animation-delay:0s}.hero .name{animation-delay:.08s}.hero h1{animation-delay:.16s}
+  .hero .lead{animation-delay:.24s}.hero .actions{animation-delay:.32s}
+  .stage .mark::before{transform-origin:top}
+  .js .stage.rv{opacity:0}
+  .js .stage.rv .mark::before{transform:scaleY(0)}
+  .js .stage.rv .dot{transform:translateY(-5px) scaleX(0)}
+  .js .stage.rv.in{opacity:1;transition:opacity .65s cubic-bezier(.2,.7,.2,1)}
+  .js .stage.rv.in .mark::before{transform:scaleY(1);transition:transform .7s cubic-bezier(.2,.7,.2,1)}
+  .js .stage.rv.in .dot{transform:translateY(-5px) scaleX(1);transition:transform .6s cubic-bezier(.2,.7,.2,1) .3s}
+  .menu .dot{transform-origin:right}
+  .js .stage.rv.in .menu li:nth-child(2) .dot{transition-delay:.38s}
+  .js .stage.rv.in .menu li:nth-child(3) .dot{transition-delay:.46s}
+  .js .stage.rv.in .menu li:nth-child(4) .dot{transition-delay:.54s}
+}
+
 </style>
 </head>
 <body>
-<svg width="0" height="0" style="position:absolute" aria-hidden="true">
-  <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2"/></symbol>
-  <symbol id="i-wa" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" d="M21 12a9 9 0 0 1-13.4 7.9L3 21l1.2-4.4A9 9 0 1 1 21 12z"/></symbol>
-  <symbol id="i-leaf" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.6" d="M4 20c0-9 6-15 16-16-1 10-7 16-16 16zM4 20l9-9"/></symbol>
-  <symbol id="i-check" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
-  <symbol id="i-clock" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></g></symbol>
-  <symbol id="i-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></g></symbol>
-</svg>
+<a class="skip" href="#main">تخطي إلى المحتوى</a>
 
-<header class="hero">
-  <svg class="leaf" aria-hidden="true"><use href="#i-leaf"/></svg>
-  <div class="wrap">
-    <span class="chip">للسيدات فقط</span>
-    <p class="brand">Ward Spa</p>
-    <h1>عناية طبيعية بالجسم والبشرة</h1>
-    <p class="lead">جلسات بمكونات طبيعية، في غرف مجهزة وخصوصية كاملة.</p>
-    <div class="actions">
-      <a class="btn gold" href="https://wa.me/201000000000"><svg><use href="#i-wa"/></svg>احجزي على واتساب</a>
-      <a class="btn line" href="tel:+201000000000"><svg><use href="#i-phone"/></svg>اتصلي بينا</a>
-    </div>
+<header class="col hero">
+  <p class="demo">نموذج تجريبي، البيانات للتوضيح فقط.</p>
+  <span class="tag">للسيدات فقط</span>
+  <p class="name">Ward Spa</p>
+  <h1>جلسات عناية بالجسم والبشرة</h1>
+  <p class="lead">المعاد بيتحدد قبل ما تيجي. اسألي الأول وبعدين احجزي.</p>
+  <div class="actions">
+    <a class="btn fill" href="https://wa.me/201000000000" rel="noopener">احجزي على واتساب</a>
+    <a class="btn out" href="tel:+201000000000">اتصلي بينا</a>
   </div>
 </header>
 
-<main class="wrap">
-  <section id="care" aria-labelledby="h-care">
-    <span class="eyebrow">عناية الجسم</span>
-    <h2 id="h-care">مشاكل بنتعامل معاها بشكل طبيعي</h2>
-    <p class="intro">حاجات كتير ستات بتتكسف تسأل عنها. هنا تقدري تعرفي عنها براحتك.</p>
-    <div class="care">
-      <article><h3>جفاف الجسم</h3><p>جلسات ترطيب بمكونات طبيعية.</p></article>
-      <article><h3>جلد الوزة</h3><p>عناية بالحبوب الصغيرة والملمس الخشن.</p></article>
-      <article><h3>تقشير الجلد الميت</h3><p>تقشير الجلد الميت بمكونات طبيعية.</p></article>
-      <article><h3>تفتيح الأماكن الغامقة</h3><p>عناية بالأماكن الغامقة في الجسم بمكونات طبيعية.</p></article>
-    </div>
-    <div class="natural"><svg><use href="#i-leaf"/></svg><span>الخامات مكونات طبيعية بتتستخدم في المكان بس ومش بتتباع، مع أجهزة في غرف مجهزة.</span></div>
-  </section>
+<main id="main" class="col line">
 
-  <section id="services" aria-labelledby="h-svc">
-    <span class="eyebrow">خدمات تانية</span>
-    <h2 id="h-svc">البشرة والشعر والأظافر</h2>
-    <ul class="svc">
-      <li><b>هيدروفيشال</b><span>تنظيف عميق للبشرة</span></li>
-      <li><b>سويت طبيعي</b><span>بالعسل والمواد الطبيعية</span></li>
-      <li><b>باديكير</b><span>عناية بالقدم</span></li>
-      <li><b>عناية بالشعر</b></li>
+  <section class="stage" aria-labelledby="h1s">
+    <span class="mark"><span class="num" aria-hidden="true"></span></span>
+    <h2 id="h1s">الوصول</h2>
+    <span class="lat">Arrival</span>
+    <p class="intro">قبل ما تدخلي، اعرفي كل حاجة براحتك.</p>
+    <ul class="pts">
+      <li>المكان للسيدات فقط.</li>
+      <li>تقدري تبعتي أي سؤال على واتساب.</li>
+      <li>اسألي عن أي جلسة قبل ما تحجزي.</li>
     </ul>
+    <div class="actions"><a class="btn fill" href="https://wa.me/201000000000" rel="noopener">ابعتي سؤالك</a></div>
   </section>
 
-  <section id="privacy" aria-labelledby="h-priv">
-    <div class="private">
-      <span class="eyebrow" style="color:var(--gold)">خصوصيتك</span>
-      <h2 id="h-priv">اسألي براحتك</h2>
-      <ul>
-        <li><svg><use href="#i-check"/></svg><span>المكان للسيدات فقط.</span></li>
-        <li><svg><use href="#i-check"/></svg><span>أي سؤال تقدري تبعتيه في رسالة خاصة على واتساب، بدل الكومنتات.</span></li>
-        <li><svg><use href="#i-check"/></svg><span>تقدري تسألي عن أي جلسة قبل ما تحجزي.</span></li>
+  <section class="stage" aria-labelledby="h2s">
+    <span class="mark"><span class="num" aria-hidden="true"></span></span>
+    <h2 id="h2s">الجلسة</h2>
+    <span class="lat">Treatment</span>
+    <p class="intro">قايمة الجلسات. المدد هنا للتوضيح فقط وبتتأكد معاكي وقت الحجز.</p>
+
+    <div class="panel">
+      <h3>عناية الجسم</h3>
+      <p class="sub">اسألي عن أي جلسة براحتك</p>
+      <ul class="menu">
+        <li><div class="row"><span class="nm">ترطيب الجسم</span><span class="dot" aria-hidden="true"></span><span class="du">60 دقيقة</span></div><p class="ds">جلسة ترطيب للجسم.</p></li>
+        <li><div class="row"><span class="nm">جلد الوزة</span><span class="dot" aria-hidden="true"></span><span class="du">45 دقيقة</span></div><p class="ds">جلسة للجلد.</p></li>
+        <li><div class="row"><span class="nm">تقشير الجلد الميت</span><span class="dot" aria-hidden="true"></span><span class="du">45 دقيقة</span></div><p class="ds">تقشير لطيف للجسم.</p></li>
+        <li><div class="row"><span class="nm">عناية بالأماكن الغامقة</span><span class="dot" aria-hidden="true"></span><span class="du">60 دقيقة</span></div><p class="ds">جلسة موضعية.</p></li>
       </ul>
-      <a class="btn gold" href="https://wa.me/201000000000"><svg><use href="#i-wa"/></svg>ابعتي سؤالك</a>
     </div>
+
+    <div class="panel">
+      <h3>البشرة والشعر والأظافر</h3>
+      <p class="sub">خدمات تانية</p>
+      <ul class="menu">
+        <li><div class="row"><span class="nm">هيدروفيشال</span><span class="dot" aria-hidden="true"></span><span class="du">50 دقيقة</span></div><p class="ds">تنظيف للبشرة.</p></li>
+        <li><div class="row"><span class="nm">سويت</span><span class="dot" aria-hidden="true"></span><span class="du">40 دقيقة</span></div><p class="ds">إزالة شعر بالسكر والعسل.</p></li>
+        <li><div class="row"><span class="nm">باديكير</span><span class="dot" aria-hidden="true"></span><span class="du">45 دقيقة</span></div><p class="ds">جلسة للقدم والأظافر.</p></li>
+        <li><div class="row"><span class="nm">عناية بالشعر</span><span class="dot" aria-hidden="true"></span><span class="du">60 دقيقة</span></div><p class="ds">جلسة للشعر.</p></li>
+      </ul>
+    </div>
+
+    <p class="note">الجلسات والمدد والمواعيد هنا أمثلة للعرض، ومش قايمة أسعار.</p>
   </section>
 
-  <section id="place" aria-labelledby="h-place">
-    <span class="eyebrow">زورينا</span>
-    <h2 id="h-place">المواعيد والعنوان</h2>
-    <div class="info">
-      <div><svg><use href="#i-clock"/></svg><p><span class="k">من 12 الظهر لحد 8 بالليل</span><span class="v">الجمعة إجازة</span></p></div>
-      <div><svg><use href="#i-pin"/></svg><p><span class="k">العنوان يظهر هنا</span><span class="v">نموذج للعرض.</span></p></div>
-      <div><svg><use href="#i-phone"/></svg><p><span class="k" dir="ltr" style="text-align:right">01000000000</span><span class="v">اتصال وواتساب</span></p></div>
-    </div>
+  <section class="stage" aria-labelledby="h3s">
+    <span class="mark"><span class="num" aria-hidden="true"></span></span>
+    <h2 id="h3s">الراحة</h2>
+    <span class="lat">Rest</span>
+    <p class="intro">بعد الجلسة خدي وقتك. دي المواعيد والعنوان (للتوضيح فقط).</p>
+    <ul class="info">
+      <li><span class="k">المواعيد</span>مثال: من 12 الظهر لحد 8 بالليل، والجمعة إجازة</li>
+      <li><span class="k">العنوان</span>عنوانك هنا</li>
+      <li><span class="k">الهاتف</span><a class="ph" href="tel:+201000000000">01000000000</a><span class="k" style="margin-top:-4px">اتصال وواتساب</span></li>
+    </ul>
+    <div class="actions"><a class="btn fill" href="https://wa.me/201000000000" rel="noopener">احجزي معادك</a></div>
   </section>
 </main>
 
-<footer class="wrap">نموذج تصميم (Concept)، الاسم والبيانات للعرض فقط.</footer>
+<footer class="col">
+  <p>نموذج تجريبي: الاسم والبيانات والمدد والمواعيد للعرض فقط.</p>
+</footer>
 
-<nav class="bar" aria-label="تواصل سريع">
-  <a class="btn gold" href="https://wa.me/201000000000"><svg><use href="#i-wa"/></svg>واتساب</a>
-  <a class="btn line" href="tel:+201000000000"><svg><use href="#i-phone"/></svg>اتصال</a>
-</nav>
+<script>
+(function(){
+  var st=document.querySelectorAll('.stage');
+  if(!('IntersectionObserver' in window)){return;}
+  st.forEach(function(e){e.classList.add('rv')});
+  var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.12,rootMargin:'0px 0px -6% 0px'});
+  st.forEach(function(e){io.observe(e)});
+})();
+</script>
 </body>
 </html>
-
