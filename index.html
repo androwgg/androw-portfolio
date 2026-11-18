@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>أندرو | مطوّر مواقع للمحلات والعيادات</title>
+<meta name="description" content="أندرو، مطوّر مواقع من المنيا، مصر. صفحات سريعة بالعربي للمحلات والعيادات والمكاتب، فيها الخدمات وزر حجز على واتساب.">
+<meta name="theme-color" content="#1a1c1e">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23d6f25f'/%3E%3Ctext x='32' y='44' font-family='Arial' font-weight='700' font-size='34' text-anchor='middle' fill='%23141a0a'%3EA%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --acc:#d6f25f;--acc-h:#c6e44b;--on-acc:#141a0a;--acc-soft:rgba(214,242,95,.14);
+  --ink:#eef0ec;--muted:rgba(238,240,236,.68);--faint:rgba(238,240,236,.66);
+  --g1:rgba(255,255,255,.055);--g2:rgba(255,255,255,.08);--bd:rgba(255,255,255,.11);--hl:rgba(255,255,255,.16);
+  --r:20px;--r2:14px;--ease:cubic-bezier(.22,1,.36,1)
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:96px}
+body{font-family:"IBM Plex Sans Arabic",system-ui,sans-serif;color:var(--ink);background:#1a1c1e;line-height:1.75;font-size:16px;overflow-x:hidden}
+a{color:inherit}
+img{display:block;max-width:100%}
+:focus-visible{outline:2px solid var(--acc);outline-offset:3px;border-radius:8px}
+.skip{position:absolute;inset-inline-start:16px;top:-60px;background:var(--acc);color:var(--on-acc);padding:8px 14px;border-radius:10px;z-index:60}
+.skip:focus{top:12px}
+.bg{position:fixed;inset:0;z-index:-1;background:
+  radial-gradient(1100px 680px at 88% -8%,#3b4756 0%,rgba(59,71,86,0) 62%),
+  radial-gradient(950px 720px at 6% 108%,#5b3b27 0%,rgba(91,59,39,0) 66%),
+  radial-gradient(700px 520px at 42% 58%,#2a2724 0%,rgba(42,39,36,0) 70%),
+  linear-gradient(160deg,#20262c 0%,#1b1b1c 46%,#241b16 100%)}
+.bg::after{content:"";position:absolute;inset:0;opacity:.05;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.wrap{max-width:1240px;margin-inline:auto;padding-inline:clamp(16px,3.4vw,40px)}
+.glass{background:var(--g1);border:1px solid var(--bd);border-radius:var(--r);-webkit-backdrop-filter:blur(22px) saturate(1.25);backdrop-filter:blur(22px) saturate(1.25);box-shadow:inset 0 1px 0 var(--hl),0 24px 60px -30px rgba(0,0,0,.6)}
+.glass2{background:var(--g2);border:1px solid var(--bd);border-radius:var(--r2);box-shadow:inset 0 1px 0 rgba(255,255,255,.09)}
+@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){.glass{background:rgba(36,38,40,.92)}}
+
+/* header */
+header{position:sticky;top:0;z-index:40;padding-block:14px}
+header::before{content:"";position:absolute;inset:0;background:rgba(24,26,28,.55);-webkit-backdrop-filter:blur(18px);backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,255,255,.07);mask:linear-gradient(#000 70%,transparent);-webkit-mask:linear-gradient(#000 70%,transparent);z-index:-1}
+.top{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:600;font-size:18px;text-decoration:none}
+.logo i{width:32px;height:32px;border-radius:10px;background:var(--acc);display:grid;place-items:center;color:var(--on-acc);font-style:normal;font-weight:700}
+.seg{position:relative;display:flex;gap:2px;padding:5px;border-radius:16px}
+.seg a{position:relative;z-index:1;padding:8px 15px;font-size:14px;color:var(--muted);text-decoration:none;border-radius:11px;white-space:nowrap;transition:color .2s}
+.seg a:hover,.seg a[aria-current="true"]{color:var(--ink)}
+.seg .ind{position:absolute;top:5px;bottom:5px;left:0;width:0;border-radius:11px;background:rgba(255,255,255,.12);box-shadow:inset 0 1px 0 rgba(255,255,255,.15);pointer-events:none}
+.tools{display:flex;gap:8px;align-items:center}
+.lang{height:40px;min-width:46px;padding-inline:12px;border-radius:12px;font:inherit;font-size:13px;font-weight:600;color:var(--ink);cursor:pointer}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 20px;border-radius:13px;font:inherit;font-weight:600;font-size:15px;text-decoration:none;border:1px solid transparent;cursor:pointer;transition:background-color .16s,transform .16s var(--ease)}
+.btn:active{transform:scale(.98)}
+.btn svg{width:19px;height:19px;flex:none}
+.b1{background:var(--acc);color:var(--on-acc)}.b1:hover{background:var(--acc-h)}
+.b2{background:rgba(255,255,255,.07);border-color:var(--bd);color:var(--ink)}.b2:hover{background:rgba(255,255,255,.12)}
+.top .b1{min-height:40px;padding-inline:15px;font-size:14px}
+
+/* hero */
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:18px;margin-top:8px}
+.panel{padding:clamp(22px,3vw,34px)}
+.kick{font-size:13px;color:var(--faint)}
+h1{font-weight:500;font-size:clamp(34px,4.2vw,54px);line-height:1.2;margin-top:10px}
+h1 em,h2 em{font-style:normal;color:var(--acc)}
+.lead{font-size:17px;font-weight:300;color:var(--muted);margin-top:14px;max-width:33em}
+.row{display:flex;gap:10px;margin-top:24px;flex-wrap:wrap}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:26px}
+.fact{padding:14px;display:flex;gap:12px;align-items:center}
+.dot{width:36px;height:36px;border-radius:11px;background:rgba(255,255,255,.08);display:grid;place-items:center;flex:none}
+.dot svg,.ico svg{width:18px;height:18px;stroke:var(--ink);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.fact b{display:block;font-weight:500;font-size:14px;line-height:1.4}.fact span{font-size:12.5px;color:var(--faint)}
+.side{padding:18px;display:flex;flex-direction:column;gap:14px}
+.sh{display:flex;justify-content:space-between;align-items:center;font-size:13px;color:var(--muted)}
+.chip{font-size:11.5px;padding:3px 10px;border-radius:8px;background:var(--acc-soft);color:var(--acc)}
+.minis{display:grid;grid-template-columns:1fr 1fr;gap:12px;flex:1}
+.mini{overflow:hidden;display:flex;flex-direction:column;text-decoration:none;transition:background-color .2s,transform .2s var(--ease)}
+.mini:hover{background:rgba(255,255,255,.11);transform:translateY(-2px)}
+.mini .ph{flex:1;min-height:130px;border-radius:10px;margin:8px 8px 0;overflow:hidden;background:#222}
+.mini img{width:100%;height:100%;object-fit:cover;object-position:top}
+.mini .tx{padding:9px 12px 12px}.mini small{font-size:11.5px;color:var(--faint)}.mini b{display:block;font-weight:500;font-size:14px}
+
+/* sections */
+section.sec{margin-top:18px;padding:clamp(20px,2.8vw,30px)}
+.hd{display:flex;justify-content:space-between;align-items:end;gap:16px;flex-wrap:wrap}
+h2{font-weight:500;font-size:clamp(24px,2.6vw,32px);line-height:1.3;margin-top:4px}
+.sub{color:var(--muted);font-size:15px;margin-top:6px;max-width:40em}
+.filters{display:flex;gap:6px;flex-wrap:wrap}
+.filters button{font:inherit;font-size:13.5px;padding:7px 14px;border-radius:11px;color:var(--muted);background:rgba(255,255,255,.05);border:1px solid var(--bd);cursor:pointer;transition:background-color .16s,color .16s}
+.filters button:hover{color:var(--ink);background:rgba(255,255,255,.09)}
+.filters button[aria-pressed="true"]{background:rgba(255,255,255,.13);color:var(--ink)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:20px;transition:filter .18s var(--ease),opacity .18s var(--ease)}
+.grid.out{filter:blur(10px);opacity:.25}
+.card{overflow:hidden;text-decoration:none;display:flex;flex-direction:column;transition:background-color .2s,transform .2s var(--ease)}
+.card:hover{background:rgba(255,255,255,.11);transform:translateY(-3px)}
+.card[hidden]{display:none}
+.grid.all .wide{grid-column:span 2}.grid.all .wide .ph{aspect-ratio:3.3}
+.card .ph{aspect-ratio:16/10;margin:8px 8px 0;border-radius:10px;overflow:hidden;background:#222}
+.card img{width:100%;height:100%;object-fit:cover;object-position:top}
+.card .tx{padding:14px 16px 16px;display:flex;justify-content:space-between;align-items:center;gap:10px}
+.card b{font-weight:500;font-size:16px;display:block}.card p{font-size:13px;color:var(--faint)}
+.go{width:36px;height:36px;border-radius:11px;background:rgba(255,255,255,.08);display:grid;place-items:center;flex:none}
+.go svg{width:16px;height:16px;stroke:var(--ink);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+[dir="ltr"] .go svg{transform:scaleX(-1)}
+.note{font-size:12.5px;color:var(--faint);margin-top:14px}
+.svc{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:20px}
+.svc .item{padding:20px}
+.ico{width:42px;height:42px;border-radius:13px;background:var(--acc-soft);display:grid;place-items:center}
+.ico svg{stroke:var(--acc)}
+.svc h3{font-weight:500;font-size:17px;margin-top:14px}
+.svc p{color:var(--muted);font-size:14.5px;margin-top:4px}
+.steps{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:20px;counter-reset:s}
+.steps li{padding:18px;position:relative}
+.steps .n{font-size:12.5px;color:var(--acc);font-weight:600}
+.steps h3{font-weight:500;font-size:16px;margin-top:6px}
+.steps p{color:var(--muted);font-size:14px;margin-top:4px}
+.contact{display:grid;grid-template-columns:1.2fr .8fr;gap:18px;align-items:center}
+.contact .card2{padding:20px}
+.contact dl{display:grid;gap:12px}
+.contact dt{font-size:12.5px;color:var(--faint)}.contact dd{font-weight:500}
+.ltr{direction:ltr;unicode-bidi:isolate}
+footer{padding-block:28px 40px;color:var(--faint);font-size:13px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:8px 22px;justify-content:space-between}
+footer nav{display:flex;gap:16px}
+footer a{color:var(--muted)}
+
+@media (max-width:1020px){
+  .grid.all .wide{grid-column:auto}.grid.all .wide .ph{aspect-ratio:16/10}
+  .hero,.contact{grid-template-columns:1fr}
+  .seg{display:none}
+  .grid,.svc{grid-template-columns:1fr 1fr}
+  .steps{grid-template-columns:1fr 1fr}
+}
+@media (max-width:640px){
+  .facts{grid-template-columns:1fr}
+  .grid,.svc,.steps{grid-template-columns:1fr}
+  .minis .mini:nth-child(n+3){display:none}
+  .glass{-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px)}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+<div class="bg" aria-hidden="true"></div>
+<a class="skip" href="#main" data-i="skip">تخطي إلى المحتوى</a>
+
+<header>
+  <div class="wrap top">
+    <a class="logo" href="#home"><i aria-hidden="true">A</i><span data-i="name">أندرو</span></a>
+    <nav class="seg glass" id="seg" aria-label="التنقل" data-i-label="navLabel">
+      <span class="ind" id="ind" aria-hidden="true"></span>
+      <a href="#home" data-i="nHome">الرئيسية</a>
+      <a href="#work" data-i="nWork">الأعمال</a>
+      <a href="#services" data-i="nSvc">الخدمات</a>
+      <a href="#process" data-i="nProc">طريقة الشغل</a>
+      <a href="#contact" data-i="nContact">تواصل</a>
+    </nav>
+    <div class="tools">
+      <button class="lang glass" id="lang" type="button" aria-label="English">EN</button>
+      <a class="btn b1" href="https://wa.me/201286362323?text=%D8%A3%D9%87%D9%84%D8%A7%D9%8B%20%D8%A3%D9%86%D8%AF%D8%B1%D9%88%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%86%D8%B4%D8%A7%D8%B7%20%D9%88%D8%B9%D8%A7%D9%8A%D8%B2%20%D9%85%D9%88%D9%82%D8%B9" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.1 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.6-.1 1.3z"/></svg><span data-i="wa">واتساب</span></a>
+    </div>
+  </div>
+</header>
+
+<main id="main" class="wrap">
+  <div class="hero" id="home">
+    <section class="glass panel" aria-labelledby="h1">
+      <span class="kick" data-i="kick">مطوّر مواقع، المنيا، مصر</span>
+      <h1 id="h1" data-i-html="h1">مواقع لمحلات وعيادات<br><em>توصّل العميل</em> لواتساب بضغطة</h1>
+      <p class="lead" data-i="lead">بصمم وببني صفحات سريعة بالعربي للمحلات والعيادات والمكاتب، فيها الخدمات والأسعار وزر حجز على واتساب، وبتشوف نموذج قبل ما تقرر.</p>
+      <div class="row">
+        <a class="btn b1" href="https://wa.me/201286362323?text=%D8%A3%D9%87%D9%84%D8%A7%D9%8B%20%D8%A3%D9%86%D8%AF%D8%B1%D9%88%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%86%D8%B4%D8%A7%D8%B7%20%D9%88%D8%B9%D8%A7%D9%8A%D8%B2%20%D9%85%D9%88%D9%82%D8%B9" rel="noopener" data-i="cta1">كلمني على واتساب</a>
+        <a class="btn b2" href="#work" data-i="cta2">شوف الأعمال</a>
+      </div>
+      <div class="facts">
+        <div class="fact glass2"><span class="dot" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 6h16M10 12h10M4 18h16"/></svg></span><div><b data-i="f1">عربي RTL</b><span data-i="f1s">موبايل وكمبيوتر</span></div></div>
+        <div class="fact glass2"><span class="dot" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="4"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg></span><div><b data-i="f2">نموذج الأول</b><span data-i="f2s">قبل أي اتفاق</span></div></div>
+        <div class="fact glass2"><span class="dot" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span><div><b data-i="f3">واتساب وماب</b><span data-i="f3s">العميل يوصلك بضغطة</span></div></div>
+      </div>
+    </section>
+    <aside class="glass side" aria-label="أحدث النماذج" data-i-label="latest">
+      <div class="sh"><span data-i="latest">أحدث النماذج</span><span class="chip" data-i="chip">جرّبها بنفسك</span></div>
+      <div class="minis">
+        <a class="mini glass2" href="work/barber/" target="_blank" rel="noopener"><div class="ph"><img src="assets/barber.jpg" width="960" height="600" alt="" loading="eager"></div><div class="tx"><small data-i="tLanding">صفحة نشاط</small><b data-i="wBarber">صالون حلاقة رجالي</b></div></a>
+        <a class="mini glass2" href="work/autobody/" target="_blank" rel="noopener"><div class="ph"><img src="assets/autobody.jpg" width="960" height="600" alt="" loading="eager"></div><div class="tx"><small data-i="tLanding">صفحة نشاط</small><b data-i="wAuto">ورشة سمكرة ودهان</b></div></a>
+        <a class="mini glass2" href="work/language/" target="_blank" rel="noopener"><div class="ph"><img src="assets/language.jpg" width="960" height="600" alt="" loading="lazy"></div><div class="tx"><small data-i="tLanding">صفحة نشاط</small><b data-i="wLang">مركز لغات</b></div></a>
+        <a class="mini glass2" href="work/laundry/" target="_blank" rel="noopener"><div class="ph"><img src="assets/laundry.jpg" width="960" height="600" alt="" loading="lazy"></div><div class="tx"><small data-i="tLanding">صفحة نشاط</small><b data-i="wLaundry">مغسلة ملابس</b></div></a>
+      </div>
+    </aside>
+  </div>
+
+  <section class="glass sec" id="work" aria-labelledby="h-work">
+    <div class="hd">
+      <div><span class="kick" data-i="nWork">الأعمال</span><h2 id="h-work" data-i="workH">نماذج لأنواع أنشطة حقيقية</h2><p class="sub" data-i="workSub">كل نموذج صفحة شغالة تقدر تفتحها وتجربها على الموبايل.</p></div>
+      <div class="filters" role="group" aria-label="تصفية" data-i-label="filter">
+        <button type="button" data-f="all" aria-pressed="true" data-i="fAll">الكل</button>
+        <button type="button" data-f="shop" aria-pressed="false" data-i="fShop">محلات</button>
+        <button type="button" data-f="health" aria-pressed="false" data-i="fHealth">صحة ورياضة</button>
+        <button type="button" data-f="service" aria-pressed="false" data-i="fSvc">خدمات</button>
+      </div>
+    </div>
+    <div class="grid all" id="grid">
+      <a class="card glass2 wide" data-c="health" href="work/gym/" target="_blank" rel="noopener"><div class="ph"><img src="assets/gym.jpg" width="960" height="600" alt="صفحة جيم وحمام سباحة" data-i-alt="aGym" loading="lazy"></div><div class="tx"><div><b data-i="wGym">جيم وحمام سباحة</b><p data-i="dGym">اشتراكات، تابات للجيم والبيسين، معرض صور</p></div><span class="go" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg></span></div></a>
+      <a class="card glass2" data-c="shop" href="work/flowers/" target="_blank" rel="noopener"><div class="ph"><img src="assets/flowers.jpg" width="960" height="600" alt="صفحة محل ورد وهدايا" data-i-alt="aFlowers" loading="lazy"></div><div class="tx"><div><b data-i="wFlowers">ورد وهدايا</b><p data-i="dFlowers">بوكيهات ومناسبات، بلهجة خليجية</p></div><span class="go" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg></span></div></a>
+      <a class="card glass2" data-c="shop" href="work/gift/" target="_blank" rel="noopener"><div class="ph"><img src="assets/gift.jpg" width="960" height="600" alt="صفحة محل هدايا وتغليف" data-i-alt="aGift" loading="lazy"></div><div class="tx"><div><b data-i="wGift">هدايا وتغليف</b><p data-i="dGift">أفكار تغليف، خطوات الطلب</p></div><span class="go" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg></span></div></a>
+      <a class="card glass2" data-c="health" href="work/clinic/" target="_blank" rel="noopener"><div class="ph"><img src="assets/clinic.jpg" width="960" height="600" alt="صفحة عيادة" data-i-alt="aClinic" loading="lazy"></div><div class="tx"><div><b data-i="wClinic">عيادة</b><p data-i="dClinic">خدمات، مواعيد، حجز</p></div><span class="go" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg></span></div></a>
+      <a class="card glass2" data-c="health" href="work/spa/" target="_blank" rel="noopener"><div class="ph"><img src="assets/spa.jpg" width="960" height="600" alt="صفحة سبا للسيدات" data-i-alt="aSpa" loading="lazy"></div><div class="tx"><div><b data-i="wSpa">سبا للسيدات</b><p data-i="dSpa">خدمات، خصوصية، حجز على واتساب</p></div><span class="go" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg></span></div></a>
+      <a class="card glass2" data-c="service" href="work/law/" target="_blank" rel="noopener"><div class="ph"><img src="assets/law.jpg" width="960" height="600" alt="صفحة مكتب محاماة" data-i-alt="aLaw" loading="lazy"></div><div class="tx"><div><b data-i="wLaw">مكتب محاماة</b><p data-i="dLaw">مجالات العمل، استشارة</p></div><span class="go" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg></span></div></a>
+      <a class="card glass2 wide" data-c="service" href="work/carwash/" target="_blank" rel="noopener"><div class="ph"><img src="assets/carwash.jpg" width="960" height="600" alt="صفحة مغسلة سيارات" data-i-alt="aCar" loading="lazy"></div><div class="tx"><div><b data-i="wCar">مغسلة سيارات</b><p data-i="dCar">خدمات، لوكيشن، اتصال مباشر</p></div><span class="go" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg></span></div></a>
+      <a class="card glass2" data-c="service" href="work/barber/" target="_blank" rel="noopener"><div class="ph"><img src="assets/barber.jpg" width="960" height="600" alt="صفحة صالون حلاقة" data-i-alt="aBarber" loading="lazy"></div><div class="tx"><div><b data-i="wBarber">صالون حلاقة رجالي</b><p data-i="dBarber">حجز بالواتساب، أسعار، موقع</p></div><span class="go" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg></span></div></a>
+      <a class="card glass2 wide" data-c="service" href="work/autobody/" target="_blank" rel="noopener"><div class="ph"><img src="assets/autobody.jpg" width="960" height="600" alt="صفحة ورشة سمكرة ودهان" data-i-alt="aAuto" loading="lazy"></div><div class="tx"><div><b data-i="wAuto">ورشة سمكرة ودهان</b><p data-i="dAuto">اختيار الخدمة وإرسال الطلب على واتساب</p></div><span class="go" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg></span></div></a>
+      <a class="card glass2" data-c="service" href="work/language/" target="_blank" rel="noopener"><div class="ph"><img src="assets/language.jpg" width="960" height="600" alt="صفحة مركز لغات" data-i-alt="aLang" loading="lazy"></div><div class="tx"><div><b data-i="wLang">مركز لغات</b><p data-i="dLang">الكورسات والأسعار، شهادات</p></div><span class="go" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg></span></div></a>
+      <a class="card glass2 wide" data-c="service" href="work/laundry/" target="_blank" rel="noopener"><div class="ph"><img src="assets/laundry.jpg" width="960" height="600" alt="صفحة مغسلة ملابس" data-i-alt="aLaundry" loading="lazy"></div><div class="tx"><div><b data-i="wLaundry">مغسلة ملابس</b><p data-i="dLaundry">تحديد القطع وإرسال الطلب على واتساب</p></div><span class="go" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg></span></div></a>
+    </div>
+    <p class="note" data-i="note">النماذج دي بأسماء وبيانات وهمية للعرض.</p>
+  </section>
+
+  <section class="glass sec" id="services" aria-labelledby="h-svc">
+    <span class="kick" data-i="nSvc">الخدمات</span>
+    <h2 id="h-svc" data-i="svcH">اللي ممكن أعمله لنشاطك</h2>
+    <div class="svc">
+      <div class="item glass2"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="3"/><path d="M3 9h18"/></svg></span><h3 data-i="s1">صفحة لنشاطك</h3><p data-i="s1d">صفحة بالعربي فيها الخدمات والأسعار والصور والعنوان، وزر واتساب واتصال.</p></div>
+      <div class="item glass2"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 20l4-1 11-11-3-3L5 16l-1 4z"/><path d="M14 6l3 3"/></svg></span><h3 data-i="s2">تحسين موقع موجود</h3><p data-i="s2d">لو عندك موقع بطيء أو شكله قديم أو مش مظبوط على الموبايل، بظبطه.</p></div>
+      <div class="item glass2"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span><h3 data-i="s3">ربط واتساب وجوجل ماب</h3><p data-i="s3d">العميل يوصل لموقعك على الخريطة ويحجز أو يسأل على واتساب من غير لف.</p></div>
+    </div>
+  </section>
+
+  <section class="glass sec" id="process" aria-labelledby="h-proc">
+    <span class="kick" data-i="nProc">طريقة الشغل</span>
+    <h2 id="h-proc" data-i="procH">من أول رسالة لحد ما الموقع يشتغل</h2>
+    <ol class="steps">
+      <li class="glass2"><span class="n">01</span><h3 data-i="p1">تكلمني على واتساب</h3><p data-i="p1d">تقولي نشاطك وإيه اللي محتاجه.</p></li>
+      <li class="glass2"><span class="n">02</span><h3 data-i="p2">نموذج قبل الاتفاق</h3><p data-i="p2d">بعملك شكل مبدئي تشوفه الأول.</p></li>
+      <li class="glass2"><span class="n">03</span><h3 data-i="p3">نتفق ونظبط</h3><p data-i="p3d">نحط صورك وأسعارك ونعدّل على ذوقك.</p></li>
+      <li class="glass2"><span class="n">04</span><h3 data-i="p4">تسليم ورفع</h3><p data-i="p4d">الموقع يترفع ويشتغل على الدومين بتاعك.</p></li>
+    </ol>
+  </section>
+
+  <section class="glass sec contact" id="contact" aria-labelledby="h-contact">
+    <div>
+      <span class="kick" data-i="nContact">تواصل</span>
+      <h2 id="h-contact" data-i-html="cH">عندك محل أو عيادة؟<br><em>نبدأ بنموذج</em></h2>
+      <p class="sub" data-i="cSub">ابعتلي اسم نشاطك ولينك مكانك على جوجل ماب، وأقولك أقدر أعمل إيه.</p>
+      <div class="row"><a class="btn b1" href="https://wa.me/201286362323?text=%D8%A3%D9%87%D9%84%D8%A7%D9%8B%20%D8%A3%D9%86%D8%AF%D8%B1%D9%88%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%86%D8%B4%D8%A7%D8%B7%20%D9%88%D8%B9%D8%A7%D9%8A%D8%B2%20%D9%85%D9%88%D9%82%D8%B9" rel="noopener" data-i="cta1">كلمني على واتساب</a></div>
+    </div>
+    <div class="card2 glass2">
+      <dl>
+        <div><dt data-i="lWa">واتساب</dt><dd class="ltr" style="text-align:start">+20 128 636 2323</dd></div>
+        <div><dt data-i="lLoc">المكان</dt><dd data-i="loc">المنيا، مصر، وبشتغل مع أي مكان أونلاين</dd></div>
+        <div><dt data-i="lLang">اللغات</dt><dd data-i="langs">عربي وإنجليزي</dd></div>
+      </dl>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span data-i="foot">© 2026 أندرو. كل الأعمال المعروضة نماذج تصميم.</span>
+    <nav aria-label="روابط قانونية" data-i-label="legal"><a data-i='priv' href='privacy/'>سياسة الخصوصية</a><a data-i='terms' href='terms/'>الشروط</a></nav>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var EN={skip:"Skip to content",name:"Androw",navLabel:"Navigation",nHome:"Home",nWork:"Work",nSvc:"Services",nProc:"Process",nContact:"Contact",wa:"WhatsApp",
+  kick:"Web developer, Minya, Egypt",h1:"Websites for shops and clinics<br>that <em>bring customers</em> to your WhatsApp",
+  lead:"I design and build fast Arabic-first pages for shops, clinics and offices, with your services, prices and a WhatsApp booking button. You see a sample before you decide.",
+  cta1:"Message me on WhatsApp",cta2:"See the work",f1:"Arabic RTL",f1s:"Phone and desktop",f2:"Sample first",f2s:"Before any deal",f3:"WhatsApp and Maps",f3s:"One tap to reach you",
+  latest:"Latest samples",chip:"Try them live",tLanding:"Business page",wGym:"Gym and pool",wFlowers:"Flowers and gifts",wSpa:"Women's spa",wLaw:"Law office",wGift:"Gift wrapping shop",wClinic:"Clinic",wCar:"Car wash",wBarber:"Barber shop",wAuto:"Auto body shop",wLang:"Language center",wLaundry:"Laundry",
+  workH:"Samples for real types of businesses",workSub:"Each sample is a working page you can open and try on your phone.",filter:"Filter",fAll:"All",fShop:"Shops",fHealth:"Health and fitness",fSvc:"Services",
+  dGym:"Memberships, gym and pool tabs, photo gallery",dFlowers:"Bouquets and occasions, Gulf Arabic copy",dGift:"Wrapping ideas, ordering steps",dClinic:"Services, hours, booking",dSpa:"Services, privacy, WhatsApp booking",dLaw:"Practice areas, consultations",dCar:"Services, location, direct call",dBarber:"WhatsApp booking, prices, location",dAuto:"Pick a service, send the request on WhatsApp",dLang:"Courses and prices, certificates",dLaundry:"Choose items, send the order on WhatsApp",
+  aGym:"Gym and pool page",aFlowers:"Flower and gift shop page",aGift:"Gift wrapping shop page",aClinic:"Clinic page",aSpa:"Women's spa page",aLaw:"Law office page",aCar:"Car wash page",aBarber:"Barber shop page",aAuto:"Auto body shop page",aLang:"Language center page",aLaundry:"Laundry page",
+  note:"These samples use made-up names and details for display.",
+  svcH:"What I can do for your business",s1:"A page for your business",s1d:"An Arabic page with your services, prices, photos and address, plus WhatsApp and call buttons.",
+  s2:"Improve an existing site",s2d:"If your site is slow, dated or broken on phones, I fix it.",s3:"WhatsApp and Google Maps",s3d:"Customers find you on the map and book or ask on WhatsApp without hassle.",
+  procH:"From the first message to a live site",p1:"Message me on WhatsApp",p1d:"Tell me about your business and what you need.",p2:"Sample first",p2d:"I make a first version for you to see.",p3:"Agree and refine",p3d:"We add your photos and prices and adjust to your taste.",p4:"Launch",p4d:"The site goes live on your own domain.",
+  cH:"Run a shop or a clinic?<br><em>Let's start with a sample</em>",cSub:"Send me your business name and your Google Maps link, and I'll tell you what I can build.",
+  lWa:"WhatsApp",lLoc:"Location",loc:"Minya, Egypt, working with clients anywhere online",lLang:"Languages",langs:"Arabic and English",
+  foot:"© 2026 Androw. All work shown is design samples.",legal:"Legal links",priv:"Privacy policy",terms:"Terms"};
+  var AR={},TITLE={ar:document.title,en:"Androw | Web developer for shops and clinics"};
+  var nodes=document.querySelectorAll('[data-i],[data-i-html],[data-i-label],[data-i-alt]');
+  nodes.forEach(function(n){
+    if(n.dataset.i)AR['t:'+n.dataset.i+':'+[].indexOf.call(nodes,n)]=n.textContent;
+    if(n.dataset.iHtml)AR['h:'+n.dataset.iHtml]=n.innerHTML;
+    if(n.dataset.iLabel)AR['l:'+n.dataset.iLabel+':'+[].indexOf.call(nodes,n)]=n.getAttribute('aria-label');
+    if(n.dataset.iAlt)AR['a:'+n.dataset.iAlt]=n.alt;
+  });
+  function set(lang){
+    var en=lang==='en';
+    document.documentElement.lang=lang;document.documentElement.dir=en?'ltr':'rtl';document.title=TITLE[lang];
+    nodes.forEach(function(n,i){
+      if(n.dataset.i)n.textContent=en?EN[n.dataset.i]:AR['t:'+n.dataset.i+':'+i];
+      if(n.dataset.iHtml)n.innerHTML=en?EN[n.dataset.iHtml]:AR['h:'+n.dataset.iHtml];
+      if(n.dataset.iLabel)n.setAttribute('aria-label',en?EN[n.dataset.iLabel]:AR['l:'+n.dataset.iLabel+':'+i]);
+      if(n.dataset.iAlt)n.alt=en?EN[n.dataset.iAlt]:AR['a:'+n.dataset.iAlt];
+    });
+    var b=document.getElementById('lang');b.textContent=en?'ع':'EN';b.setAttribute('aria-label',en?'العربية':'English');
+    try{localStorage.setItem('lang',lang)}catch(e){}
+    place(true);
+  }
+  document.getElementById('lang').addEventListener('click',function(){set(document.documentElement.lang==='ar'?'en':'ar')});
+
+  /* nav indicator: leading edge moves first, trailing edge catches up */
+  var seg=document.getElementById('seg'),ind=document.getElementById('ind'),links=[].slice.call(seg.querySelectorAll('a'));
+  var cur=links[0],L=0,R=0,raf=null,reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function box(a){var s=seg.getBoundingClientRect(),r=a.getBoundingClientRect();return [r.left-s.left,r.right-s.left]}
+  function draw(l,r){ind.style.left=l+'px';ind.style.width=Math.max(0,r-l)+'px'}
+  function place(jump){
+    if(!cur||!seg.offsetParent)return;
+    var t=box(cur);
+    if(jump||reduce||(!L&&!R)){L=t[0];R=t[1];draw(L,R);return}
+    var l0=L,r0=R,goingRight=t[1]>R,start=null;cancelAnimationFrame(raf);
+    function e(x){return 1-Math.pow(1-x,3)}
+    function step(ts){if(!start)start=ts;var k=(ts-start)/420;
+      var fast=e(Math.min(1,k/0.6)),slow=e(Math.min(1,Math.max(0,(k-0.12)/0.88)));
+      var lk=goingRight?slow:fast,rk=goingRight?fast:slow;
+      L=l0+(t[0]-l0)*lk;R=r0+(t[1]-r0)*rk;draw(L,R);if(k<1)raf=requestAnimationFrame(step)}
+    raf=requestAnimationFrame(step);
+  }
+  function activate(a){if(a===cur)return;links.forEach(function(x){x.removeAttribute('aria-current')});a.setAttribute('aria-current','true');cur=a;place(false)}
+  links[0].setAttribute('aria-current','true');
+  var secs=links.map(function(a){return document.querySelector(a.getAttribute('href'))});
+  var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){var i=secs.indexOf(x.target);if(i>-1)activate(links[i])}})},{rootMargin:'-45% 0px -50% 0px'});
+  secs.forEach(function(s){if(s)io.observe(s)});
+  addEventListener('resize',function(){place(true)});
+  document.fonts&&document.fonts.ready.then(function(){place(true)});
+
+  /* filters with blur swap */
+  var grid=document.getElementById('grid'),btns=[].slice.call(document.querySelectorAll('.filters button'));
+  btns.forEach(function(b){b.addEventListener('click',function(){
+    if(b.getAttribute('aria-pressed')==='true')return;
+    btns.forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false')});
+    var f=b.dataset.f;
+    function apply(){grid.classList.toggle('all',f==='all');[].forEach.call(grid.children,function(c){c.hidden=!(f==='all'||c.dataset.c===f)})}
+    if(reduce){apply();return}
+    grid.classList.add('out');setTimeout(function(){apply();requestAnimationFrame(function(){grid.classList.remove('out')})},180);
+  })});
+
+  var saved=null;try{saved=localStorage.getItem('lang')}catch(e){}
+  if(saved==='en')set('en');else place(true);
+})();
+</script>
+</body>
+</html>
+

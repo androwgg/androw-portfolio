@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>آيرون ويف | جيم وبيسين</title>
+<meta name="description" content="آيرون ويف: جيم وحمام سباحة في مكان واحد. اسأل عن الاشتراكات على واتساب.">
+<meta name="theme-color" content="#151210">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23151210'/%3E%3Crect x='10' y='26' width='44' height='12' fill='%23c23a44'/%3E%3Crect x='6' y='18' width='8' height='28' fill='%23f3ece2'/%3E%3Crect x='50' y='18' width='8' height='28' fill='%23f3ece2'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600&family=Reem+Kufi:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* Androw Boutique Dark design system */
+  --surface-0:#151210; --surface-1:#211c19; --line:#2c2622; --line-strong:#7a6b5f;
+  --ink:#f3ece2; --ink-2:#c9bcae; --muted:#b9ab9b;
+  --accent:#c23a44; --accent-hover:#a8303a; --accent-text:#e8737b; --kraft:#d9bb93; --focus:#e8c89a;
+  --ease:cubic-bezier(.22,1,.36,1);
+  --display:"Reem Kufi","IBM Plex Sans Arabic",sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{font-family:"IBM Plex Sans Arabic",system-ui,sans-serif;background:var(--surface-0);color:var(--ink);line-height:1.8;font-size:17px;padding-bottom:72px}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--focus);outline-offset:3px}
+.wrap{width:100%;max-width:1200px;margin-inline:auto;padding-inline:20px}
+@media (min-width:900px){.wrap{padding-inline:72px}}
+.skip{position:absolute;inset-inline-start:16px;top:-60px;background:var(--ink);color:var(--surface-0);padding:10px 14px;z-index:50}
+.skip:focus{top:10px}
+.ltr{direction:ltr;unicode-bidi:isolate}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:10px 26px;font:inherit;font-weight:600;font-size:1rem;text-decoration:none;border:1px solid transparent;cursor:pointer;transition:transform .16s var(--ease),background-color .16s,border-color .16s}
+.btn svg{width:20px;height:20px;flex:none}
+.btn:active{transform:scale(.98)}
+.btn-accent{background:var(--accent);color:#fff}
+.btn-accent:hover{background:var(--accent-hover)}
+.btn-outline{border-color:var(--line-strong);color:var(--ink);background:transparent}
+.btn-outline:hover{background:var(--surface-1);border-color:var(--ink)}
+
+header.top{position:sticky;top:0;z-index:30;background:rgba(21,18,16,.9);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;min-height:76px;gap:16px}
+.logo{display:flex;flex-direction:column;line-height:1;text-decoration:none;direction:ltr}
+.logo b{font-family:var(--display);font-size:1.35rem;letter-spacing:1px;font-weight:700}
+.logo span{font-size:.7rem;letter-spacing:4px;color:var(--accent-text);margin-top:4px}
+nav.main{display:flex;gap:30px;font-size:.95rem}
+nav.main a{color:var(--muted);text-decoration:none;transition:color .15s}
+nav.main a:hover{color:var(--ink)}
+@media (max-width:860px){nav.main{display:none}}
+.top .btn{min-height:44px;padding-inline:18px;font-size:.92rem}
+
+/* hero: full-bleed photo, text on the start side */
+.hero{position:relative;min-height:min(720px,86vh);display:flex;align-items:flex-end;overflow:hidden;border-bottom:1px solid var(--line)}
+.hero-media{position:absolute;inset:0}
+.hero-media img{width:100%;height:100%;object-fit:cover;filter:saturate(.85) contrast(1.08)}
+.hero-media::after{content:"";position:absolute;inset:0;background:linear-gradient(270deg,rgba(21,18,16,.92) 0%,rgba(21,18,16,.7) 42%,rgba(21,18,16,.15) 100%),linear-gradient(0deg,rgba(21,18,16,.95),rgba(21,18,16,0) 45%)}
+.hero .wrap{position:relative;padding-block:120px 64px}
+.hero-line{position:absolute;top:0;bottom:0;inset-inline-end:22%;width:2px;background:var(--accent);transform-origin:top}
+@media (max-width:820px){.hero-line{display:none}}
+.eyebrow{display:inline-flex;align-items:center;gap:14px;color:var(--muted);font-size:.9rem;letter-spacing:.5px}
+.eyebrow::before{content:"";width:40px;height:1px;background:var(--accent)}
+.hero h1{font-family:var(--display);font-weight:600;font-size:clamp(2.6rem,1.3rem + 5vw,5.6rem);line-height:1.1;margin-top:16px;max-width:12ch}
+.hero h1 em{font-style:normal;color:var(--accent-text)}
+.hero .lead{margin-top:20px;font-size:1.15rem;font-weight:300;color:var(--ink-2);max-width:34em;line-height:1.9}
+.hero .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin-top:48px;border-top:1px solid var(--line);max-width:760px}
+.facts div{padding:18px 0 0;display:flex;flex-direction:column;gap:2px}
+.facts div+div{padding-inline-start:24px;border-inline-start:1px solid var(--line)}
+.facts b{font-family:var(--display);font-size:1.35rem;font-weight:600}
+.facts span{color:var(--muted);font-size:.9rem}
+@media (max-width:560px){.facts{grid-template-columns:1fr}.facts div+div{padding-inline-start:0;border-inline-start:0;border-top:1px solid var(--line);margin-top:14px}}
+
+@media (prefers-reduced-motion:no-preference){
+  .hero h1{animation:rise .65s var(--ease) both}
+  .hero .lead{animation:rise .65s var(--ease) .08s both}
+  .hero .cta{animation:rise .65s var(--ease) .16s both}
+  .hero-media img{animation:settle 1.4s var(--ease) both}
+  .hero-line{animation:draw .8s var(--ease) .35s both}
+  .facts{animation:fade .6s var(--ease) .45s both}
+}
+@keyframes rise{from{transform:translateY(18px)}to{transform:none}}
+@keyframes settle{from{transform:scale(1.06)}to{transform:none}}
+@keyframes draw{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+
+section{padding-block:clamp(64px,9vw,112px)}
+section+section{border-top:1px solid var(--line)}
+.head{max-width:40em;margin-bottom:36px}
+.head h2{font-family:var(--display);font-weight:600;font-size:clamp(1.9rem,1.3rem + 2.2vw,2.9rem);line-height:1.25;margin-top:10px}
+.head p{margin-top:10px;color:var(--muted)}
+
+/* tabs: gym / pool */
+.tabs{display:flex;gap:36px;border-bottom:1px solid var(--line);margin-bottom:36px;overflow-x:auto;scrollbar-width:none}
+.tab{font:inherit;font-size:1.1rem;font-weight:500;padding:12px 0 14px;border:0;border-bottom:2px solid transparent;margin-bottom:-1px;background:none;color:var(--muted);cursor:pointer;white-space:nowrap;transition:color .16s,border-color .16s}
+.tab:hover{color:var(--ink)}
+.tab[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--accent)}
+.panel{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:clamp(24px,5vw,64px);align-items:center}
+.panel[hidden]{display:none}
+.panel.in{animation:panelIn .3s var(--ease)}
+@keyframes panelIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.panel h3{font-family:var(--display);font-size:2rem;font-weight:600}
+.panel p{color:var(--ink-2);margin-top:8px;max-width:30em}
+.panel ul{list-style:none;margin-top:18px}
+.panel li{display:flex;gap:12px;align-items:center;padding:14px 0;border-bottom:1px solid var(--line)}
+.panel li svg{width:20px;height:20px;color:var(--accent-text);flex:none}
+.panel .ph{aspect-ratio:4/3;overflow:hidden}
+.panel .ph img{width:100%;height:100%;object-fit:cover;filter:saturate(.85) contrast(1.05)}
+@media (max-width:820px){.panel{grid-template-columns:1fr}.panel .ph{order:-1}}
+
+/* plans */
+.plans{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.plan{background:var(--surface-1);border:1px solid var(--line);padding:26px 22px;display:flex;flex-direction:column;gap:10px;transition:border-color .2s,transform .2s var(--ease)}
+.plan:hover{border-color:var(--line-strong);transform:translateY(-3px)}
+.plan .dur{font-family:var(--display);font-size:1.6rem;font-weight:600}
+.plan .price{color:var(--muted);font-size:.95rem}
+.plan .btn{margin-top:auto;min-height:46px;font-size:.92rem}
+.plan.pick{border-color:var(--accent)}
+.plan.pick .tag{align-self:flex-start;background:var(--accent);color:#fff;font-size:.78rem;padding:3px 10px}
+.note{margin-top:16px;color:var(--muted);font-size:.9rem}
+@media (max-width:900px){.plans{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:440px){.plans{grid-template-columns:1fr}}
+
+/* carousel */
+.bar-row{display:flex;align-items:end;justify-content:space-between;gap:16px;margin-bottom:28px}
+.bar-row .head{margin-bottom:0}
+.arrows{display:flex;gap:8px;flex:none}
+.arrow{width:48px;height:48px;border:1px solid var(--line-strong);background:transparent;color:var(--ink);display:grid;place-items:center;cursor:pointer;transition:background-color .16s,color .16s,border-color .16s}
+.arrow:hover{background:var(--ink);color:var(--surface-0);border-color:var(--ink)}
+.arrow:disabled{opacity:.35;cursor:default;background:transparent;color:var(--ink);border-color:var(--line-strong)}
+.arrow svg{width:20px;height:20px}
+.track{display:grid;grid-auto-flow:column;grid-auto-columns:min(74%,340px);gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none;overscroll-behavior-x:contain}
+.track::-webkit-scrollbar{display:none}
+.slide{scroll-snap-align:start;margin:0}
+.slide .ph{aspect-ratio:3/4;overflow:hidden;background:var(--surface-1)}
+.slide img{width:100%;height:100%;object-fit:cover;filter:saturate(.8) contrast(1.06);transition:transform .5s var(--ease)}
+.slide:hover img{transform:scale(1.04)}
+.slide figcaption{margin-top:12px;display:flex;justify-content:space-between;font-weight:500}
+.slide figcaption span{color:var(--muted);font-weight:400}
+.progress{height:2px;background:var(--line);margin-top:22px;position:relative}
+.progress i{position:absolute;inset-block:0;inset-inline-start:0;background:var(--accent);width:25%;transition:width .3s var(--ease)}
+.disclaim{margin-top:10px;color:var(--muted);font-size:.85rem}
+
+/* steps */
+.steps-wrap{position:relative}
+.steps-wrap::before,.steps-wrap .fill{content:"";position:absolute;inset-inline-start:22px;top:10px;width:2px;height:calc(100% - 20px);background:var(--line)}
+.steps-wrap .fill{background:var(--accent);transform-origin:top;transform:scaleY(var(--p,1))}
+.steps{list-style:none;display:grid;gap:16px;padding-inline-start:64px}
+.step{position:relative;background:var(--surface-1);border:1px solid var(--line);padding:20px 22px}
+.step .n{position:absolute;inset-inline-start:-64px;top:16px;width:46px;height:46px;background:var(--surface-0);border:1px solid var(--accent);display:grid;place-items:center;font-family:var(--display);font-weight:600;color:var(--accent-text);font-size:1.15rem}
+.step h3{font-size:1.1rem;font-weight:600}
+.step p{color:var(--muted)}
+
+/* pool band */
+.band{background:var(--surface-1)}
+.band .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,5vw,64px);align-items:center}
+.band .ph{aspect-ratio:5/4;overflow:hidden}
+.band .ph img{width:100%;height:100%;object-fit:cover;filter:saturate(.85) contrast(1.05)}
+@media (max-width:820px){.band .wrap{grid-template-columns:1fr}}
+
+/* contact */
+.contact .wrap{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(24px,5vw,64px);align-items:start}
+.card{border:1px solid var(--line)}
+.card .row{display:flex;gap:14px;padding:18px 20px;border-top:1px solid var(--line)}
+.card .row:first-child{border-top:0}
+.card svg{width:22px;height:22px;color:var(--accent-text);flex:none;margin-top:3px}
+.card b{display:block;font-weight:600}
+.card span{color:var(--muted)}
+.cta-box{background:var(--surface-1);color:var(--ink);padding:34px 34px 34px 48px;position:relative;overflow:hidden;border:1px solid var(--line)}
+.cta-box::after{content:"";position:absolute;inset-block:0;inset-inline-end:0;width:4px;background:var(--kraft)}
+.cta-box h3{font-family:var(--display);font-size:1.7rem;line-height:1.3;font-weight:600;max-width:14ch}
+.cta-box p{margin-top:8px;color:var(--muted);max-width:26ch}
+.cta-box .btn{margin-top:20px}
+@media (max-width:820px){.contact .wrap{grid-template-columns:1fr}}
+
+footer{border-top:1px solid var(--line);padding-block:26px;color:var(--muted);font-size:.86rem}
+footer .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between}
+.dock{position:fixed;inset-inline:0;bottom:0;z-index:40;display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(33,28,25,.97);border-top:1px solid var(--line)}
+.dock .btn{min-height:46px}
+@media (min-width:861px){.dock{display:none}body{padding-bottom:0}}
+@media (prefers-reduced-motion:reduce){html,.track{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">تخطي إلى المحتوى</a>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-wa" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 20.5l1.7-5.4A8.4 8.4 0 1 1 21 11.5z"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-left" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M15 5l-7 7 7 7"/></symbol>
+  <symbol id="i-right" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></g></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></g></symbol>
+</svg>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="آيرون ويف، الصفحة الرئيسية"><b>IRONWAVE</b><span>GYM &amp; POOL</span></a>
+    <nav class="main" aria-label="التنقل الرئيسي">
+      <a href="#inside">الجيم والبيسين</a>
+      <a href="#plans">الاشتراكات</a>
+      <a href="#how">إزاي تشترك</a>
+      <a href="#contact">تواصل</a>
+    </nav>
+    <a class="btn btn-accent" href="https://wa.me/201000000000"><svg aria-hidden="true"><use href="#i-wa"/></svg>واتساب</a>
+  </div>
+</header>
+
+<main id="main">
+  <div class="hero" id="top">
+    <div class="hero-media"><img src="img/hero.jpg" width="1600" height="1067" alt="صالة جيم بإضاءة خافتة وصفوف أجهزة"></div>
+    <span class="hero-line" aria-hidden="true"></span>
+    <div class="wrap">
+      <span class="eyebrow">نادي رياضي</span>
+      <h1>جيم و<em>بيسين</em> في مكان واحد</h1>
+      <p class="lead">حديد وكارديو وحمام سباحة. ابعت على واتساب واسأل عن الاشتراك والمواعيد.</p>
+      <div class="cta">
+        <a class="btn btn-accent" href="https://wa.me/201000000000?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A3%D8%B3%D8%A3%D9%84%20%D8%B9%D9%86%20%D8%A7%D9%84%D8%A7%D8%B4%D8%AA%D8%B1%D8%A7%D9%83%D8%A7%D8%AA"><svg aria-hidden="true"><use href="#i-wa"/></svg>اسأل عن الاشتراك على واتساب</a>
+        <a class="btn btn-outline" href="#plans">شوف الاشتراكات</a>
+      </div>
+      <div class="facts">
+        <div><b>جيم</b><span>حديد وأجهزة وكارديو</span></div>
+        <div><b>بيسين</b><span>حمام سباحة في نفس المكان</span></div>
+        <div><b>24 ساعة</b><span>مفتوح طول اليوم</span></div>
+      </div>
+    </div>
+  </div>
+
+  <section id="inside" aria-labelledby="h-inside">
+    <div class="wrap">
+      <div class="head"><span class="eyebrow">جوه المكان</span><h2 id="h-inside">جوه الجيم والبيسين</h2></div>
+      <div class="tabs" role="tablist" aria-label="الجيم والبيسين">
+        <button class="tab" role="tab" id="t1" aria-controls="p1" aria-selected="true">الجيم</button>
+        <button class="tab" role="tab" id="t2" aria-controls="p2" aria-selected="false" tabindex="-1">البيسين</button>
+      </div>
+      <div class="panel" role="tabpanel" id="p1" aria-labelledby="t1" tabindex="0">
+        <div><h3>صالة الجيم</h3><p>مساحة للحديد والأجهزة والكارديو، لو بتبدأ أو بتكمل تمرينك.</p>
+          <ul><li><svg aria-hidden="true"><use href="#i-check"/></svg>أوزان حرة ودامبلز</li><li><svg aria-hidden="true"><use href="#i-check"/></svg>أجهزة مقاومة</li><li><svg aria-hidden="true"><use href="#i-check"/></svg>كارديو</li></ul></div>
+        <div class="ph"><img src="img/g2.jpg" width="1065" height="1600" loading="lazy" alt="صالة جيم فيها أجهزة ومقاعد تمرين"></div>
+      </div>
+      <div class="panel" role="tabpanel" id="p2" aria-labelledby="t2" tabindex="0" hidden>
+        <div><h3>حمام السباحة</h3><p>اسبح بعد التمرين في نفس المكان. اسأل عن مواعيد البيسين على واتساب.</p>
+          <ul><li><svg aria-hidden="true"><use href="#i-check"/></svg>بيسين في نفس المكان</li><li><svg aria-hidden="true"><use href="#i-check"/></svg>اسأل عن باقات البيسين</li><li><svg aria-hidden="true"><use href="#i-check"/></svg>المواعيد على واتساب</li></ul></div>
+        <div class="ph"><img src="img/pool.jpg" width="1600" height="1200" loading="lazy" alt="حمام سباحة داخلي بحارات"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="plans" aria-labelledby="h-plans">
+    <div class="wrap">
+      <div class="head"><span class="eyebrow">الاشتراكات</span><h2 id="h-plans">اشترك بالمدة اللي تناسبك</h2></div>
+      <div class="plans">
+        <div class="plan"><span class="dur">شهر</span><span class="price">450 ج.م</span><a class="btn btn-outline" href="https://wa.me/201000000000">اسأل على واتساب</a></div>
+        <div class="plan"><span class="dur">3 شهور</span><span class="price">1,200 ج.م</span><a class="btn btn-outline" href="https://wa.me/201000000000">اسأل على واتساب</a></div>
+        <div class="plan"><span class="dur">6 شهور</span><span class="price">2,200 ج.م</span><a class="btn btn-outline" href="https://wa.me/201000000000">اسأل على واتساب</a></div>
+        <div class="plan"><span class="dur">سنة</span><span class="price">4,000 ج.م</span><a class="btn btn-outline" href="https://wa.me/201000000000">اسأل على واتساب</a></div>
+      </div>
+      <p class="note">المدد والأسعار بتتحط هنا بعد التأكيد مع الإدارة.</p>
+    </div>
+  </section>
+
+  <section id="gallery" aria-labelledby="h-gallery">
+    <div class="wrap">
+      <div class="bar-row">
+        <div class="head"><span class="eyebrow">من المكان</span><h2 id="h-gallery">لفة جوه الجيم</h2></div>
+        <div class="arrows">
+          <button class="arrow" id="prev" aria-label="الصورة اللي قبلها"><svg aria-hidden="true"><use href="#i-right"/></svg></button>
+          <button class="arrow" id="next" aria-label="الصورة اللي بعدها"><svg aria-hidden="true"><use href="#i-left"/></svg></button>
+        </div>
+      </div>
+      <div class="track" id="track" role="region" tabindex="0" aria-label="صور المكان، اسحب للجنب">
+        <figure class="slide"><div class="ph"><img src="img/g1.jpg" width="1067" height="1600" loading="lazy" alt="صف دامبلز على رف"></div><figcaption>الأوزان الحرة<span>01</span></figcaption></figure>
+        <figure class="slide"><div class="ph"><img src="img/g3.jpg" width="1067" height="1600" loading="lazy" alt="جهاز تمرين بأوزان قريب"></div><figcaption>الأجهزة<span>02</span></figcaption></figure>
+        <figure class="slide"><div class="ph"><img src="img/hero.jpg" width="1600" height="1067" loading="lazy" alt="صالة التمرين بإضاءة خافتة"></div><figcaption>الصالة<span>03</span></figcaption></figure>
+        <figure class="slide"><div class="ph"><img src="img/g4.jpg" width="1600" height="900" loading="lazy" alt="حمام سباحة بحارات"></div><figcaption>البيسين<span>04</span></figcaption></figure>
+      </div>
+      <div class="progress" aria-hidden="true"><i id="bar"></i></div>
+      <p class="disclaim">صور للتوضيح، وصور المكان الحقيقية بتتحط هنا.</p>
+    </div>
+  </section>
+
+  <section id="how" aria-labelledby="h-how">
+    <div class="wrap">
+      <div class="head"><span class="eyebrow">إزاي تشترك</span><h2 id="h-how">3 خطوات وتبدأ</h2></div>
+      <div class="steps-wrap">
+        <span class="fill" aria-hidden="true"></span>
+        <ol class="steps" id="steps">
+          <li class="step"><span class="n" aria-hidden="true">1</span><h3>ابعت على واتساب</h3><p>قولنا عايز جيم ولا بيسين ولا الاتنين.</p></li>
+          <li class="step"><span class="n" aria-hidden="true">2</span><h3>اختار المدة</h3><p>شهر أو 3 أو 6 شهور أو سنة.</p></li>
+          <li class="step"><span class="n" aria-hidden="true">3</span><h3>تعالى وابدأ</h3><p>تعالى المكان وكمّل اشتراكك وابدأ تمرينك.</p></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact" aria-labelledby="h-contact">
+    <div class="wrap">
+      <div>
+        <div class="head"><span class="eyebrow">تواصل</span><h2 id="h-contact">زورنا أو ابعتلنا</h2></div>
+        <div class="card">
+          <div class="row"><svg aria-hidden="true"><use href="#i-clock"/></svg><p><b>المواعيد</b><span>مفتوح 24 ساعة، واسأل عن مواعيد البيسين</span></p></div>
+          <div class="row"><svg aria-hidden="true"><use href="#i-pin"/></svg><p><b>العنوان</b><span>شارع النصر، وسط المدينة</span></p></div>
+          <div class="row"><svg aria-hidden="true"><use href="#i-phone"/></svg><p><b><a class="ltr" href="tel:+201000000000">010 0000 0000</a></b><span>اتصال وواتساب</span></p></div>
+        </div>
+      </div>
+      <div class="cta-box">
+        <h3>جاهز تبدأ؟</h3>
+        <p>ابعتلنا على واتساب ونقولك على الاشتراكات المتاحة.</p>
+        <a class="btn btn-accent" href="https://wa.me/201000000000"><svg aria-hidden="true"><use href="#i-wa"/></svg>ابعت على واتساب</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>آيرون ويف. نموذج تصميم (Concept)، الاسم والبيانات للعرض فقط.</span>
+    <span>الصور من Unsplash تحت رخصة Unsplash.</span>
+  </div>
+</footer>
+
+<nav class="dock" aria-label="تواصل سريع">
+  <a class="btn btn-accent" href="https://wa.me/201000000000"><svg aria-hidden="true"><use href="#i-wa"/></svg>واتساب</a>
+  <a class="btn btn-outline" href="tel:+201000000000"><svg aria-hidden="true"><use href="#i-phone"/></svg>اتصال</a>
+</nav>
+
+<script>
+(function(){
+  var tabs=[].slice.call(document.querySelectorAll('[role="tab"]'));
+  function select(t){tabs.forEach(function(x){var on=x===t;x.setAttribute('aria-selected',on);x.tabIndex=on?0:-1;var p=document.getElementById(x.getAttribute('aria-controls'));p.hidden=!on;if(on){p.classList.remove('in');void p.offsetWidth;p.classList.add('in');}});}
+  window.__selectTab=function(i){select(tabs[i])};
+  tabs.forEach(function(t,i){
+    t.addEventListener('click',function(){select(t)});
+    t.addEventListener('keydown',function(e){var j=null;if(e.key==='ArrowLeft')j=(i+1)%tabs.length;else if(e.key==='ArrowRight')j=(i-1+tabs.length)%tabs.length;else if(e.key==='Home')j=0;else if(e.key==='End')j=tabs.length-1;if(j!==null){e.preventDefault();tabs[j].focus();select(tabs[j]);}});
+  });
+  var track=document.getElementById('track'),prev=document.getElementById('prev'),next=document.getElementById('next'),bar=document.getElementById('bar');
+  var slides=[].slice.call(track.children);
+  function step(){return slides[0].getBoundingClientRect().width+16}
+  function update(){var max=track.scrollWidth-track.clientWidth;var p=Math.abs(track.scrollLeft);prev.disabled=p<4;next.disabled=p>max-4;var f=max>0?p/max:1;bar.style.width=(25+75*f)+'%';}
+  next.addEventListener('click',function(){track.scrollBy({left:-step()})});
+  prev.addEventListener('click',function(){track.scrollBy({left:step()})});
+  track.addEventListener('scroll',function(){requestAnimationFrame(update)},{passive:true});
+  window.addEventListener('resize',update);update();
+  var steps=document.getElementById('steps'),fill=steps.parentNode.querySelector('.fill');
+  if(!matchMedia('(prefers-reduced-motion: reduce)').matches){
+    function onScroll(){var r=steps.getBoundingClientRect();var p=(innerHeight*0.75-r.top)/r.height;fill.style.setProperty('--p',Math.max(0,Math.min(1,p)).toFixed(3));}
+    window.__stepsUpdate=onScroll;
+    addEventListener('scroll',function(){requestAnimationFrame(onScroll)},{passive:true});addEventListener('resize',onScroll);onScroll();
+  }
+})();
+</script>
+</body>
+</html>
+

@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>عيادة نور للجلدية والتجميل</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --deep:#16302d; --deep-2:#1f403c; --cream:#f6f1e7; --paper:#fbf9f4;
+  --gold:#c8a465; --gold-ink:#1b1608; --ink:#1d2624; --muted:#56635f; --line:#e4ddcf;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"IBM Plex Sans Arabic",system-ui,sans-serif;background:var(--paper);color:var(--ink);line-height:1.7;padding-bottom:76px}
+.wrap{max-width:760px;margin:0 auto;padding-left:20px;padding-right:20px}
+a{color:inherit}
+a:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.hero{background:var(--deep);color:var(--cream);position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;left:-70px;bottom:-110px;width:260px;height:260px;border:1px solid rgba(200,164,101,.35);border-radius:50%}
+.hero::before{content:"";position:absolute;left:-20px;bottom:-170px;width:260px;height:260px;border:1px solid rgba(200,164,101,.18);border-radius:50%}
+.hero .wrap{padding-top:44px;padding-bottom:40px;position:relative;z-index:1}
+.place{display:inline-flex;align-items:center;gap:8px;font-size:.9rem;color:var(--gold);font-weight:500}
+.place::before{content:"";width:22px;height:1px;background:var(--gold)}
+h1{font-size:2rem;line-height:1.3;font-weight:700;margin-top:14px}
+h1 small{display:block;font-size:1rem;font-weight:400;color:#cfd8d3;margin-top:10px;line-height:1.7}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:26px}
+.btn{display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-weight:600;padding:12px 18px;border-radius:6px;border:1px solid transparent;font-size:1rem}
+.btn svg{width:18px;height:18px;flex:none}
+.btn.gold{background:var(--gold);color:var(--gold-ink)}
+.btn.line{border-color:rgba(246,241,231,.45);color:var(--cream)}
+.btn.dark{background:var(--deep);color:var(--cream)}
+.facts{background:var(--deep-2);color:var(--cream)}
+.facts ul{list-style:none;display:grid;grid-template-columns:1fr}
+.facts li{display:flex;align-items:center;gap:12px;padding:14px 0;border-top:1px solid rgba(246,241,231,.12);font-size:.95rem}
+.facts li:first-child{border-top:0}
+.facts svg{width:20px;height:20px;color:var(--gold);flex:none}
+.facts b{font-weight:600}
+section{padding:40px 0}
+section+section{border-top:1px solid var(--line)}
+.eyebrow{font-size:.8rem;font-weight:600;color:#8a6a2c}
+h2{font-size:1.45rem;line-height:1.35;margin:4px 0 18px}
+.hours{background:#fff;border:1px solid var(--line);border-radius:8px;overflow:hidden}
+.row{display:flex;justify-content:space-between;align-items:center;gap:14px;padding:15px 16px;border-top:1px solid var(--line)}
+.row:first-child{border-top:0}
+.row .t{font-weight:600;white-space:nowrap}
+.row.off .t{color:#9a3b2f}
+.row.today{background:#f3ecdc}
+.row.today .d::after{content:"النهارده";margin-right:8px;font-size:.72rem;font-weight:600;background:var(--deep);color:var(--cream);padding:2px 7px;border-radius:4px;vertical-align:2px}
+.steps{list-style:none;counter-reset:s;display:grid;gap:12px}
+.steps li{counter-increment:s;display:flex;gap:14px;background:#fff;border:1px solid var(--line);border-radius:8px;padding:16px}
+.steps li::before{content:counter(s);flex:none;width:30px;height:30px;border-radius:6px;background:var(--deep);color:var(--gold);font-weight:700;display:grid;place-items:center}
+.steps a{font-weight:600;color:var(--deep);direction:ltr;unicode-bidi:isolate}
+.services{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.services li{background:var(--deep);color:var(--cream);border-radius:8px;padding:22px 10px;text-align:center;font-weight:600;border-top:3px solid var(--gold)}
+.svc-note{margin-top:12px;color:var(--muted);font-size:.9rem}
+address{font-style:normal;font-size:1.05rem}
+.addr-card{background:#fff;border:1px solid var(--line);border-radius:8px;padding:18px}
+.addr-card .btn{margin-top:14px}
+footer{padding-top:24px;padding-bottom:30px;color:var(--muted);font-size:.85rem;border-top:1px solid var(--line)}
+.bar{position:fixed;left:0;right:0;bottom:0;background:rgba(22,48,45,.97);display:flex;gap:8px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));z-index:10}
+.bar a{flex:1;justify-content:center}
+@media (min-width:700px){.bar{display:none}body{padding-bottom:0}.facts ul{grid-template-columns:repeat(3,1fr);gap:18px}.facts li{border-top:0}}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <span class="place">جلدية وتجميل</span>
+    <h1>عيادة نور للجلدية والتجميل
+      <small>الكشف بأسبقية الحضور، ومتاح عدد محدود من الحجوزات بالتليفون.</small>
+    </h1>
+    <div class="actions">
+      <a class="btn gold" href="tel:+201000000000"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2"/></svg>احجز بالتليفون</a>
+      <a class="btn line" href="https://wa.me/201000000000"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12a9 9 0 0 1-13.4 7.9L3 21l1.2-4.4A9 9 0 1 1 21 12z"/></svg>راسلنا واتساب</a>
+    </div>
+  </div>
+</header>
+
+<div class="facts">
+  <div class="wrap">
+    <ul>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>شغالين كل الأيام <b>ما عدا الجمعة</b></span></li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg><span>العنوان يظهر هنا (نموذج)</span></li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2"/></svg><span>الحجز: <b dir="ltr">01000000000</b></span></li>
+    </ul>
+  </div>
+</div>
+
+<main class="wrap">
+  <section id="hours" aria-labelledby="h-hours">
+    <span class="eyebrow">المواعيد</span>
+    <h2 id="h-hours">مواعيد العيادة</h2>
+    <div class="hours">
+      <div class="row" data-day="6"><span class="d">السبت</span><span class="t">من 6:30 لـ 10 مساءً</span></div>
+      <div class="row" data-day="0"><span class="d">الأحد</span><span class="t">من 1 الظهر لـ 4 العصر</span></div>
+      <div class="row" data-day="1"><span class="d">الاثنين</span><span class="t">من 6:30 لـ 10 مساءً</span></div>
+      <div class="row" data-day="2"><span class="d">الثلاثاء</span><span class="t">من 6:30 لـ 10 مساءً</span></div>
+      <div class="row" data-day="3"><span class="d">الأربعاء</span><span class="t">من 1 الظهر لـ 4 العصر</span></div>
+      <div class="row" data-day="4"><span class="d">الخميس</span><span class="t">من 6:30 لـ 10 مساءً</span></div>
+      <div class="row off" data-day="5"><span class="d">الجمعة</span><span class="t">إجازة</span></div>
+    </div>
+  </section>
+
+  <section id="booking" aria-labelledby="h-book">
+    <span class="eyebrow">الحجز</span>
+    <h2 id="h-book">إزاي تحجز</h2>
+    <ol class="steps">
+      <li><div>تعالى العيادة في الميعاد والكشف بأسبقية الحضور، أو احجز بالتليفون على <a href="tel:+201000000000">01000000000</a> (لعدد محدود).</div></li>
+      <li><div>لو العدد اكتمل، الحجز بيتحول لليوم اللي بعده.</div></li>
+      <li><div>لو مش هتقدر تيجي، اعتذر قبل الميعاد بوقت كافي، عشان الفرصة تتاح لمريض تاني.</div></li>
+    </ol>
+  </section>
+
+  <section id="services" aria-labelledby="h-svc">
+    <span class="eyebrow">الخدمات</span>
+    <h2 id="h-svc">من خدمات العيادة</h2>
+    <ul class="services">
+      <li>بوتوكس</li>
+      <li>فيلر</li>
+      <li>فراكشنال ليزر</li>
+    </ul>
+    <p class="svc-note">الدكتورة بتحدد المناسب ليك بعد الكشف.</p>
+  </section>
+
+  <section id="place" aria-labelledby="h-addr">
+    <span class="eyebrow">العنوان</span>
+    <h2 id="h-addr">مكان العيادة</h2>
+    <div class="addr-card">
+      <address>العنوان بالتفصيل يظهر هنا (نموذج).</address>
+    </div>
+  </section>
+</main>
+
+<footer class="wrap">نموذج تصميم (Concept)، الاسم والبيانات للعرض فقط.</footer>
+
+<nav class="bar" aria-label="تواصل سريع">
+  <a class="btn gold" href="tel:+201000000000"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2"/></svg>اتصال</a>
+  <a class="btn line" href="https://wa.me/201000000000"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12a9 9 0 0 1-13.4 7.9L3 21l1.2-4.4A9 9 0 1 1 21 12z"/></svg>واتساب</a>
+</nav>
+<script>
+try{var r=document.querySelector('.row[data-day="'+new Date().getDay()+'"]');if(r)r.classList.add('today');}catch(e){}
+</script>
+</body>
+</html>
+
